@@ -6,6 +6,7 @@ import {StylingConventionsComponent} from './styling-conventions/styling-convent
 import {RouterModule} from '@angular/router';
 import {HeaderComponent} from './header/header.component';
 import {SplashComponent} from './splash/splash.component';
+import {FooterComponent} from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import {SplashComponent} from './splash/splash.component';
     StylingConventionsComponent,
     HeaderComponent,
     SplashComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
