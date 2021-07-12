@@ -1,15 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core'
 
 @Component({
   selector: 'app-click-events',
   templateUrl: './click-events.component.html',
-  styleUrls: ['./click-events.component.less']
+  styleUrls: ['./click-events.component.less'],
 })
 export class ClickEventsComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
+  ngOnInit(): void {}
 
-  ngOnInit(): void {
+  basicClickMessage = 'You clicked the button. Well done.'
+
+  basicClickEvent(): void {
+    alert(this.basicClickMessage)
   }
-
 }
