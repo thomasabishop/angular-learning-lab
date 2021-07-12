@@ -1,1 +1,28 @@
-<p>styling-conventions works!</p>
+<h2 class="h3">Styling methods</h2>
+<hr />
+<h3 class="h4">Inline styles</h3>
+<p>
+  This <span style="color: blue; font-weight: bold">word</span> is styled using
+  the standard inline HTML <code>style</code> attribute, e.g
+  <code>style="color: blue; font-weight: bold"</code>
+</p>
+<p>
+  This <span [style.color]="darkRed" style="font-weight: bold">word</span> is
+  also styled using the inline method however it uses Angular property bindings
+  and the style value is sourced from a property belonging to the component
+  class, e.g
+  <code>[style.color] = "darkRed"</code>
+</p>
+
+<h3 class="h4">External styles</h3>
+<p>
+  The styling of <span class="app-stylesheet-style">this phrase</span> is
+  achieved via the global application stylesheet <code>styles.less</code>.
+</p>
+<p>
+  The styling of <span class="component-stylesheet-style">this phrase</span> is
+  achieved via the component-scoped stylesheet
+  <code>styling-conventions.component.less</code>.
+</p>
+
+<h3 class="h4">Conditional styling</h3>

@@ -1,15 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core'
 
 @Component({
   selector: 'app-styling-conventions',
   templateUrl: './styling-conventions.component.html',
-  styleUrls: ['./styling-conventions.component.less']
+  styleUrls: ['./styling-conventions.component.less'],
 })
 export class StylingConventionsComponent implements OnInit {
+  darkRed = 'crimson'
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }
