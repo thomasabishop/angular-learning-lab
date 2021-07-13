@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core'
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-click-events',
@@ -9,10 +9,9 @@ export class ClickEventsComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
-
-  basicClickMessage = 'You clicked the button. Well done.'
-
+  test = 'test';
+  basicClickMessage = 'You clicked the button. Well done.';
   basicClickEvent(): void {
-    alert(this.basicClickMessage)
+    alert(this.basicClickMessage);
   }
 }

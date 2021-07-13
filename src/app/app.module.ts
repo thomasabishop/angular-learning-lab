@@ -1,12 +1,15 @@
-import {NgModule} from '@angular/core';
-import {BrowserModule} from '@angular/platform-browser';
-import {AppComponent} from './app.component';
-import {ClickEventsComponent} from './click-events/click-events.component';
-import {StylingConventionsComponent} from './styling-conventions/styling-conventions.component';
-import {RouterModule} from '@angular/router';
-import {HeaderComponent} from './header/header.component';
-import {SplashComponent} from './splash/splash.component';
-import {FooterComponent} from './footer/footer.component';
+import { NgModule } from '@angular/core'
+import { BrowserModule } from '@angular/platform-browser'
+import { AppComponent } from './app.component'
+import { ClickEventsComponent } from './click-events/click-events.component'
+import { StylingConventionsComponent } from './styling-conventions/styling-conventions.component'
+import { RouterModule } from '@angular/router'
+import { HeaderComponent } from './header/header.component'
+import { SplashComponent } from './splash/splash.component'
+import { FooterComponent } from './footer/footer.component'
+import { ForLoopComponent } from './for-loop/for-loop.component'
+import { NamesAgesComponent } from './names-ages/names-ages.component'
+import { ConditionalRenderingComponent } from './conditional-rendering/conditional-rendering.component'
 
 @NgModule({
   declarations: [
@@ -16,6 +19,9 @@ import {FooterComponent} from './footer/footer.component';
     HeaderComponent,
     SplashComponent,
     FooterComponent,
+    ForLoopComponent,
+    NamesAgesComponent,
+    ConditionalRenderingComponent,
   ],
   imports: [
     BrowserModule,
@@ -31,6 +37,14 @@ import {FooterComponent} from './footer/footer.component';
       {
         path: 'styling-conventions',
         component: StylingConventionsComponent,
+      },
+      {
+        path: 'data-iterate',
+        component: ForLoopComponent,
+      },
+      {
+        path: 'conditional-rendering',
+        component: ConditionalRenderingComponent,
       },
     ]),
   ],

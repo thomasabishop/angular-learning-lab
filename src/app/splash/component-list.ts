@@ -1,6 +1,6 @@
 interface IComponentList {
-  component: string;
-  path: string;
+  component: string
+  path: string
 }
 
 export const componentList: IComponentList[] = [
@@ -12,4 +12,12 @@ export const componentList: IComponentList[] = [
     component: 'Styling methods',
     path: '/styling-conventions',
   },
-];
+  {
+    component: 'Iterating through data',
+    path: '/data-iterate',
+  },
+  {
+    component: 'Conditional rendering',
+    path: '/conditional-rendering',
+  },
+]
