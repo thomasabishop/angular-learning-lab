@@ -9,7 +9,8 @@ import { SplashComponent } from './splash/splash.component'
 import { FooterComponent } from './footer/footer.component'
 import { ForLoopComponent } from './for-loop/for-loop.component'
 import { NamesAgesComponent } from './names-ages/names-ages.component'
-import { ConditionalRenderingComponent } from './conditional-rendering/conditional-rendering.component'
+import { ConditionalRenderingComponent } from './conditional-rendering/conditional-rendering.component';
+import { InputLoopComponent } from './input-loop/input-loop.component'
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { ConditionalRenderingComponent } from './conditional-rendering/condition
     ForLoopComponent,
     NamesAgesComponent,
     ConditionalRenderingComponent,
+    InputLoopComponent,
   ],
   imports: [
     BrowserModule,

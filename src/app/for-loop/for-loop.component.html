@@ -8,3 +8,11 @@
   component itself
 </p>
 <app-names-ages></app-names-ages>
+
+<h3 class="h4">Iteration with <code>@Input</code></h3>
+<p>
+  This time we iterate again but the data is passed from <i>this</i> parent component to the child
+  component below that is prepared to accept data that meets its typed definition.The
+  <code>@Input</code> decorator facilitates this.
+</p>
+<app-input-loop *ngFor="let lang of progLangs" [programmingLanguageData]="lang"></app-input-loop>
