@@ -2,27 +2,77 @@
 <hr />
 <h3 class="h4">Inline styles</h3>
 <p>
-  This <span style="color: blue; font-weight: bold">word</span> is styled using
-  the standard inline HTML <code>style</code> attribute, e.g
+  This <span style="color: blue; font-weight: bold">word</span> is styled using the standard inline
+  HTML <code>style</code> attribute, e.g
   <code>style="color: blue; font-weight: bold"</code>
 </p>
 <p>
-  This <span [style.color]="darkRed" style="font-weight: bold">word</span> is
-  also styled using the inline method however it uses Angular property bindings
-  and the style value is sourced from a property belonging to the component
-  class, e.g
+  This <span [style.color]="darkRed" style="font-weight: bold">word</span> is also styled using the
+  inline method however it uses Angular property bindings and the style value is sourced from a
+  property belonging to the component class, e.g
   <code>[style.color] = "darkRed"</code>
 </p>
 
 <h3 class="h4">External styles</h3>
 <p>
-  The styling of <span class="app-stylesheet-style">this phrase</span> is
-  achieved via the global application stylesheet <code>styles.less</code>.
+  The styling of <span class="app-stylesheet-style">this phrase</span> is achieved via the global
+  application stylesheet <code>styles.less</code>.
 </p>
 <p>
-  The styling of <span class="component-stylesheet-style">this phrase</span> is
-  achieved via the component-scoped stylesheet
-  <code>styling-conventions.component.less</code>.
+  The styling of <span class="component-stylesheet-style">this phrase</span> is achieved via the
+  component-scoped stylesheet <code>styling-conventions.component.less</code>.
 </p>
 
 <h3 class="h4">Conditional styling</h3>
+<p>We can use logic within <code>.component.ts</code> to apply styles on a conditional basis.</p>
+<p>
+  We are going to make our styles conditional on properties belonging to the following data
+  structure:
+</p>
+
+<pre><code [highlight]="codeOne"  [languages]="languages"></code></pre>
+<h4 class="h5">Applying multiple styles</h4>
+<p>
+  We have seen above that we can pass in styles defined in the component class via the
+  <code>[style]</code> property binding. However this only really works with a single style rule. If
+  you added multiple <code>[style]</code> bindings for each property the code would become unwieldy.
+  For cases where we want to apply multiple styles on a conditional basis we can apply the classes
+  via a method on the class component.
+</p>
+<p>Here is our method:</p>
+
+<pre><code [highlight]="codeTwo"  [languages]="languages"></code></pre>
+
+<p>
+  We bind this to the requisite line in our component template using the
+  <code>ngStyle</code> binding
+</p>
+
+<pre><code [highlight]="codeThree"  [languages]="languages"></code></pre>
+
+<h4 class="h5">Applying classes conditionally</h4>
+<p>
+  Above, we applied a set of style rules as a JavaScript object. We can do the same thing less
+  verbosely by applying a CSS class rather than an object. We do this using the
+  <code>ngClass</code> binding.
+</p>
+
+<p>Here is our conditional logic from <code>.component.ts</code>:</p>
+
+<pre><code [highlight]="codeFour"  [languages]="languages"></code></pre>
+
+<p>
+  In this case we applied the class as a key on the object, and the function as a value. Note that
+  <code>oldest</code> stands is the name of the CSS class that is being applied.
+</p>
+
+<div class="alert alert-danger" role="alert">
+  Check that multiple classes can be applied as separate key-value pairs
+</div>
+
+<p>
+  Alternatively we could pass the classes as an array. To do this we'd just use a simple one -line
+  function:
+</p>
+
+<pre><code [highlight]="codeFive"  [languages]="languages"></code></pre>
