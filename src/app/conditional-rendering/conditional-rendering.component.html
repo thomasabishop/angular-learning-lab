@@ -1,2 +1,60 @@
 <h2 class="h3">Conditional rendering</h2>
 <hr />
+<h3 class="h4">Most basic example of conditional rendering</h3>
+<p>
+  The content below is rendered or not rendered based on a simple boolean applied to the root
+  element (<code>*ngIf="true"</code>). We toggle the value of the boolean to show/hide the content.
+  Note that when the element is de-rendered, it is not being hidden, it isn't injected into the DOM
+  at all.
+</p>
+
+<div class="conditional-render" *ngIf="true">
+  <div class="card">
+    <div class="card-body">Hi, I'm conditionally rendered.</div>
+  </div>
+</div>
+
+<h3 class="h4">Render if data is returned</h3>
+<div class="card">
+  <div class="card-body">
+    <app-cond-render-block *ngFor="let fruit of fruits" [dataToConditionallyRender]="fruit">
+    </app-cond-render-block>
+  </div>
+</div>
+
+<p>
+  This variation shows a useful application of conditional rendering: we make the rendering
+  conditional on whether or not the data exists for a given array element. For instance, if we make
+  a request to an API and one instance of the returned data is either undefined or null doesn't that
+  element won't be rendered at all, rather than displaying
+  <code>undefined</code> or broken data. I have added two non-compliant values: `null` and
+  `undefined` to the data array to simulate this.
+</p>
+
+<!-- 
+COME BACK TO + DISCUSS W/ JONNY    
+<div *ngIf="dataToConditionallyRender">
+  <div *ngFor="let datum of dataToConditionallyRender">
+    <ul>
+      <li>{{ datum.fruit }}:</li>
+      <ul>
+        <li>{{ datum.weight }}g</li>
+      </ul>
+    </ul>
+  </div>
+</div> -->
+
+<h4 class="h5">Data:</h4>
+<pre><code [highlight]="codeOne"  [languages]="languages"></code></pre>
+
+<h4 class="h5">Child template</h4>
+<pre><code [highlight]="codeTwo"  [languages]="languages"></code></pre>
+<h4 class="h5">Parent invocation of child template</h4>
+<pre><code [highlight]="codeThree"  [languages]="languages"></code></pre>
+
+<h3 class="h4">Render if data contains property</h3>
+<p>
+  The variation below renders the component if the data is renders constains a certain property:
+</p>
+
+<pre><code [highlight]="codeFour"  [languages]="languages"></code></pre>

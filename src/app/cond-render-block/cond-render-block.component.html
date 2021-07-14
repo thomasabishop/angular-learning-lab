@@ -1,0 +1,11 @@
+<ul *ngIf="dataToConditionallyRender && dataToConditionallyRender.weight">
+  <li>{{ dataToConditionallyRender.fruit }}:</li>
+  <ul>
+    <li>{{ dataToConditionallyRender.weight }}g</li>
+  </ul>
+</ul>
+<!-- Why can't I do this? How do we implement type guarding?
+<ul *ngIf="dataToConditionallyRender && typeof(dataToConditionallyRender) === IFruits">
+...
+</ul>
+-->
