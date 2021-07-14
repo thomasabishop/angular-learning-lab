@@ -1,16 +1,18 @@
-import { NgModule } from '@angular/core'
-import { BrowserModule } from '@angular/platform-browser'
-import { AppComponent } from './app.component'
-import { ClickEventsComponent } from './click-events/click-events.component'
-import { StylingConventionsComponent } from './styling-conventions/styling-conventions.component'
-import { RouterModule } from '@angular/router'
-import { HeaderComponent } from './header/header.component'
-import { SplashComponent } from './splash/splash.component'
-import { FooterComponent } from './footer/footer.component'
-import { ForLoopComponent } from './for-loop/for-loop.component'
-import { NamesAgesComponent } from './names-ages/names-ages.component'
-import { ConditionalRenderingComponent } from './conditional-rendering/conditional-rendering.component';
-import { InputLoopComponent } from './input-loop/input-loop.component'
+import {NgModule} from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {HighlightModule, HIGHLIGHT_OPTIONS} from 'ngx-highlightjs';
+import {AppComponent} from './app.component';
+import {ClickEventsComponent} from './click-events/click-events.component';
+import {StylingConventionsComponent} from './styling-conventions/styling-conventions.component';
+import {RouterModule} from '@angular/router';
+import {HeaderComponent} from './header/header.component';
+import {SplashComponent} from './splash/splash.component';
+import {FooterComponent} from './footer/footer.component';
+import {ForLoopComponent} from './for-loop/for-loop.component';
+import {NamesAgesComponent} from './names-ages/names-ages.component';
+import {ConditionalRenderingComponent} from './conditional-rendering/conditional-rendering.component';
+import {InputLoopComponent} from './input-loop/input-loop.component';
+import {CondRenderBlockComponent} from './cond-render-block/cond-render-block.component';
 
 @NgModule({
   declarations: [
@@ -24,9 +26,11 @@ import { InputLoopComponent } from './input-loop/input-loop.component'
     NamesAgesComponent,
     ConditionalRenderingComponent,
     InputLoopComponent,
+    CondRenderBlockComponent,
   ],
   imports: [
     BrowserModule,
+    HighlightModule,
     RouterModule.forRoot([
       {
         path: '',
@@ -50,7 +54,14 @@ import { InputLoopComponent } from './input-loop/input-loop.component'
       },
     ]),
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HIGHLIGHT_OPTIONS,
+      useValue: {
+        fullLibraryLoader: () => import('highlight.js'),
+      },
+    },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
