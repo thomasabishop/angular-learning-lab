@@ -13,6 +13,7 @@ import {NamesAgesComponent} from './names-ages/names-ages.component';
 import {ConditionalRenderingComponent} from './conditional-rendering/conditional-rendering.component';
 import {InputLoopComponent} from './input-loop/input-loop.component';
 import {CondRenderBlockComponent} from './cond-render-block/cond-render-block.component';
+import { CounterComponent } from './counter/counter.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import {CondRenderBlockComponent} from './cond-render-block/cond-render-block.co
     ConditionalRenderingComponent,
     InputLoopComponent,
     CondRenderBlockComponent,
+    CounterComponent,
   ],
   imports: [
     BrowserModule,

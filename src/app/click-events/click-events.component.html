@@ -2,10 +2,15 @@
 <hr />
 <h3 class="h4">Basic click event</h3>
 <p>On button click an alert is displayed in the window.</p>
-<button
-  type="button"
-  class="btn btn-primary btn-sm"
-  (click)="basicClickEvent()"
->
-  Click
-</button>
+<div class="card">
+  <div class="card-body">
+    <button type="button" class="btn btn-primary btn-sm" (click)="basicClickEvent()">Click</button>
+  </div>
+</div>
+
+<h3 class="h4">Click counter</h3>
+<div class="card">
+  <div class="card-body">
+    <app-counter></app-counter>
+  </div>
+</div>
