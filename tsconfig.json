@@ -1,27 +1,32 @@
-/* To learn more about this file see: https://angular.io/config/tsconfig. */
 {
-  "compileOnSave": false,
   "compilerOptions": {
-    "baseUrl": "./",
-    "outDir": "./dist/out-tsc",
-    "forceConsistentCasingInFileNames": true,
-    "strict": true,
-    "noImplicitReturns": true,
-    "noFallthroughCasesInSwitch": true,
+    "module": "commonjs",
+    "sourceRoot": "src",
+    "target": "es6",
     "sourceMap": true,
-    "declaration": false,
-    "downlevelIteration": true,
-    "experimentalDecorators": true,
+    "alwaysStrict": true,
+    "typeRoots": ["node_modules/@types"],
+    "incremental": true,
+    "tsBuildInfoFile": ".tsbuildinfo",
+    "lib": ["dom", "es2018"],
     "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowJs": true,
+    "keyofStringsOnly": false,
+    "downlevelIteration": true,
+    "forceConsistentCasingInFileNames": true,
     "importHelpers": true,
-    "target": "es2017",
-    "module": "es2020",
-    "lib": ["es2018", "dom"]
+    "noEmitOnError": true,
+    "noErrorTruncation": true,
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "pretty": true,
+    "strict": true,
+    "strictPropertyInitialization": false,
+    "skipLibCheck": false
+
   },
-  "angularCompilerOptions": {
-    "enableI18nLegacyMessageIdFormat": false,
-    "strictInjectionParameters": true,
-    "strictInputAccessModifiers": true,
-    "strictTemplates": false
-  }
+  "include": ["**/*.ts"],
 }
