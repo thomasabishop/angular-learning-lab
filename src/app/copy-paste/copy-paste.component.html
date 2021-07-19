@@ -2,7 +2,9 @@
 <hr />
 
 <div class="d-flex justify-content-end">
-  <button type="button" class="btn btn-primary">Copy Text</button>
+  <button type="button" class="btn btn-primary" (click)="copyPlaintext(copythis.value)">
+    Copy Text
+  </button>
 </div>
 <ul class="nav nav-tabs" id="myTab" role="tablist">
   <li class="nav-item" role="presentation">
@@ -44,15 +46,10 @@
 </ul>
 <div class="tab-content mb-4" id="myTabContent">
   <div class="tab-pane fade show active" id="plaintext" role="tabpanel">
-    <p>
-      <code style="color: black">
-        Sed suscipit lacus id arcu malesuada, eu elementum nulla feugiat. Etiam erat magna, feugiat
-        et ligula in, eleifend scelerisque dolor. Donec nulla nunc, maximus sed ornare a, vulputate
-        quis sem. Integer rutrum sapien id lectus bibendum euismod. Duis ut est quis nibh porta
-        sodales. Duis rhoncus erat nec purus venenatis, vitae rutrum velit fermentum. Lorem ipsum
-        dolor sit amet, consectetur adipiscing elit. Phasellus eget ante massa.
-      </code>
-    </p>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="2" #copythis>
+Sed suscipit lacus id arcu malesuada, eu elementum nulla feugiat. Etiam erat magna, feugiat et ligula in, eleifend scelerisque dolor. Donec nulla nunc, maximus sed ornare a, vulputate quis sem. 
+  </textarea
+    >
   </div>
   <div class="tab-pane fade" id="json" role="tabpanel">
     <p>

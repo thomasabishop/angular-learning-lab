@@ -9,4 +9,10 @@ import {dummyJson} from './dummyJson';
 export class CopyPasteComponent implements OnInit {
   public dummyJson = dummyJson;
   public ngOnInit(): void {}
+
+  public copyPlaintext(newClip: string): void {
+    navigator.clipboard.writeText(newClip).then(function () {
+      console.log(newClip);
+    });
+  }
 }
