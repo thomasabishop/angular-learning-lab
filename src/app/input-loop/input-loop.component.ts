@@ -7,12 +7,9 @@ import {IInputLoop} from './input-loop.model';
   styleUrls: ['./input-loop.component.less'],
 })
 export class InputLoopComponent implements OnInit {
-  constructor() {}
+  @Input() public programmingLanguageData!: IInputLoop;
 
-  ngOnInit(): void {}
-
-  @Input()
-  programmingLanguageData!: IInputLoop;
+  public ngOnInit(): void {}
 }
 
 // ng-container

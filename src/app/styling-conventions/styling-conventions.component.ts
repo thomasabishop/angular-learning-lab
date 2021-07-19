@@ -7,11 +7,10 @@ import {Component, OnInit} from '@angular/core';
 })
 export class StylingConventionsComponent implements OnInit {
   constructor() {}
-  ngOnInit(): void {}
 
-  darkRed = 'crimson';
-  languages = ['json', 'typescript', 'html'];
-  codeOne = `const PEOPLE = [
+  public darkRed = 'crimson';
+
+  public codeOne = `const PEOPLE = [
   {
     name: 'Thomas',
     age: 32,
@@ -24,10 +23,10 @@ export class StylingConventionsComponent implements OnInit {
     name: 'Mary Jo',
     age: 62,
   },
-];
+  ];
   `;
 
-  codeTwo = `applyMultipleStylesConditionally() {
+  public codeTwo = `applyMultipleStylesConditionally() {
     if (this.people.age < 30)
       return {
         color: 'blue',
@@ -36,15 +35,17 @@ export class StylingConventionsComponent implements OnInit {
   }
   // Note that we use camelCase for the style properties, not CSS kebab-case`;
 
-  codeThree = ` <p [ngStyle]="applyMultipleStylesConditionally()">{{ people.age }}</p>`;
+  public codeThree = ` <p [ngStyle]="applyMultipleStylesConditionally()">{{ people.age }}</p>`;
 
-  codeFour = `applyConditionalClass() {
+  public codeFour = `applyConditionalClass() {
     return {
       oldest: this.people.age > 50,
     };
    }`;
 
-  codeFive = `applyConditionalClassAlternative() {
+  public codeFive = `applyConditionalClassAlternative() {
     return this.people.age > 50 && ['oldest'];
   }`;
+
+  public ngOnInit(): void {}
 }
