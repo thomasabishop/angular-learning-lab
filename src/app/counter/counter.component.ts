@@ -1,12 +1,13 @@
 import {Component, OnInit} from '@angular/core';
-
+import {CounterAlertService} from '../counter-alert.service';
 @Component({
   selector: 'app-counter',
   templateUrl: './counter.component.html',
   styleUrls: ['./counter.component.less'],
 })
 export class CounterComponent implements OnInit {
-  constructor() {}
+  constructor(public makeCounterAlert: CounterAlertService) {}
+
   public counter = 0;
   public ngOnInit(): void {}
 
@@ -20,5 +21,9 @@ export class CounterComponent implements OnInit {
 
   public reset(): number {
     return (this.counter = 0);
+  }
+
+  public counterAlert(): void {
+    this.makeCounterAlert.issueAlert(this.counter);
   }
 }
