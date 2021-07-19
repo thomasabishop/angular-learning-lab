@@ -1,4 +1,4 @@
-<div class="d-flex justify-content-around align-items-center">
+<div class="d-flex flex-column flex-md-row justify-content-md-around align-items-center">
   <div>
     <div class="alert alert-secondary mb-0" role="alert">
       {{ counter }}
@@ -6,13 +6,16 @@
   </div>
 
   <div>
-    <div class="btn-group" role="group" aria-label="Basic example">
+    <div class="btn-group m-3 m-md-0" role="group" aria-label="Basic example">
       <button type="button" class="btn btn-light" (click)="increase()">Increase</button>
       <button type="button" class="btn btn-light" (click)="decrease()">Decrease</button>
       <button type="button" class="btn btn-light" (click)="reset()">Reset</button>
     </div>
   </div>
-  <button type="button" class="btn btn-outline-primary btn-sm" (click)="counterAlert()">
-    Invoke service
+  <button type="button" class="m-3 m-md-0 btn btn-outline-primary btn-sm" (click)="counterAlert()">
+    Invoke alert service
+  </button>
+  <button type="button" class="btn btn-outline-primary btn-sm" (click)="counterConsole()">
+    Invoke console service
   </button>
 </div>
