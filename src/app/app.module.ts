@@ -13,7 +13,9 @@ import {NamesAgesComponent} from './names-ages/names-ages.component';
 import {ConditionalRenderingComponent} from './conditional-rendering/conditional-rendering.component';
 import {InputLoopComponent} from './input-loop/input-loop.component';
 import {CondRenderBlockComponent} from './cond-render-block/cond-render-block.component';
-import { CounterComponent } from './counter/counter.component';
+import {CounterComponent} from './counter/counter.component';
+import {ApiCallComponent} from './api-call/api-call.component';
+import {CopyPasteComponent} from './copy-paste/copy-paste.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +31,8 @@ import { CounterComponent } from './counter/counter.component';
     InputLoopComponent,
     CondRenderBlockComponent,
     CounterComponent,
+    ApiCallComponent,
+    CopyPasteComponent,
   ],
   imports: [
     BrowserModule,
@@ -53,6 +57,14 @@ import { CounterComponent } from './counter/counter.component';
       {
         path: 'conditional-rendering',
         component: ConditionalRenderingComponent,
+      },
+      {
+        path: 'working-with-apis',
+        component: ApiCallComponent,
+      },
+      {
+        path: 'copy-paste',
+        component: CopyPasteComponent,
       },
     ]),
   ],

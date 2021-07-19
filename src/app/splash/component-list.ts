@@ -1,6 +1,6 @@
 interface IComponentList {
-  component: string
-  path: string
+  component: string;
+  path: string;
 }
 
 export const componentList: IComponentList[] = [
@@ -20,4 +20,12 @@ export const componentList: IComponentList[] = [
     component: 'Conditional rendering',
     path: '/conditional-rendering',
   },
-]
+  {
+    component: 'Working with APIs',
+    path: '/working-with-apis',
+  },
+  {
+    component: 'Copy and paste text',
+    path: '/copy-paste',
+  },
+];
