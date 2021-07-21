@@ -14,7 +14,6 @@ import {ConditionalRenderingComponent} from './conditional-rendering/conditional
 import {InputLoopComponent} from './input-loop/input-loop.component';
 import {CondRenderBlockComponent} from './cond-render-block/cond-render-block.component';
 import {CounterComponent} from './counter/counter.component';
-import {ApiCallComponent} from './api-call/api-call.component';
 import {CopyPasteComponent} from './copy-paste/copy-paste.component';
 
 @NgModule({
@@ -31,7 +30,6 @@ import {CopyPasteComponent} from './copy-paste/copy-paste.component';
     InputLoopComponent,
     CondRenderBlockComponent,
     CounterComponent,
-    ApiCallComponent,
     CopyPasteComponent,
   ],
   imports: [
@@ -57,10 +55,6 @@ import {CopyPasteComponent} from './copy-paste/copy-paste.component';
       {
         path: 'conditional-rendering',
         component: ConditionalRenderingComponent,
-      },
-      {
-        path: 'working-with-apis',
-        component: ApiCallComponent,
       },
       {
         path: 'copy-paste',
