@@ -1,5 +1,6 @@
 import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
+import {TabsModule} from 'ngx-bootstrap/tabs';
 import {HighlightModule, HIGHLIGHT_OPTIONS} from 'ngx-highlightjs';
 import {AppComponent} from './app.component';
 import {ClickEventsComponent} from './click-events/click-events.component';
@@ -35,6 +36,7 @@ import {CopyPasteComponent} from './copy-paste/copy-paste.component';
   imports: [
     BrowserModule,
     HighlightModule,
+    TabsModule.forRoot(),
     RouterModule.forRoot([
       {
         path: '',
