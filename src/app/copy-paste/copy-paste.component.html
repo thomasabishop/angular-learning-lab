@@ -1,76 +1,40 @@
 <h2 class="h3">Copy and paste text mock-up</h2>
 <hr />
-
 <div class="d-flex justify-content-end">
-  <button type="button" class="btn btn-primary" (click)="copyPlaintext(copythis.value)">
+  <button (click)="copy(narrative.textContent)" type="button" class="btn btn-primary">
     Copy Text
   </button>
 </div>
-<ul class="nav nav-tabs" id="myTab" role="tablist">
-  <li class="nav-item" role="presentation">
-    <a
-      class="nav-link active"
-      id="home-tab"
-      data-toggle="tab"
-      href="#plaintext"
-      role="tab"
-      aria-controls="home"
-      aria-selected="true"
-      >Plaintext</a
-    >
-  </li>
-  <li class="nav-item" role="presentation">
-    <a
-      class="nav-link"
-      id="profile-tab"
-      data-toggle="tab"
-      href="#json"
-      role="tab"
-      aria-controls="profile"
-      aria-selected="false"
-      >JSON</a
-    >
-  </li>
-  <li class="nav-item" role="presentation">
-    <a
-      class="nav-link"
-      id="contact-tab"
-      data-toggle="tab"
-      href="#richtext"
-      role="tab"
-      aria-controls="contact"
-      aria-selected="false"
-      >Rich text</a
-    >
-  </li>
-</ul>
-<div class="tab-content mb-4" id="myTabContent">
-  <div class="tab-pane fade show active" id="plaintext" role="tabpanel">
-    <textarea class="form-control" id="exampleFormControlTextarea1" rows="2" #copythis>
-Sed suscipit lacus id arcu malesuada, eu elementum nulla feugiat. Etiam erat magna, feugiat et ligula in, eleifend scelerisque dolor. Donec nulla nunc, maximus sed ornare a, vulputate quis sem. 
-  </textarea
-    >
-  </div>
-  <div class="tab-pane fade" id="json" role="tabpanel">
-    <p>
-      <code style="color: black">{{ dummyJson }} </code>
-    </p>
-  </div>
-  <div class="tab-pane fade" id="richtext" role="tabpanel">
-    <p>
-      Sed suscipit lacus id arcu <b>malesuada</b>, eu elementum nulla feugiat. Etiam erat magna,
-      feugiat et ligula in, <i>eleifend scelerisque</i> dolor. Donec nulla nunc, maximus sed ornare
-      a, vulputate quis sem. Integer rutrum sapien id lectus bibendum euismod. Duis
-      <b>ut est quis nibh porta </b>sodales:
-    </p>
-    <ul>
-      <li>Lorem ipsum dolar sit</li>
-      <li>Lorem ipsum dolar sit</li>
-    </ul>
+
+<!--Studio Runner layout starts -->
+<div class="studio-runner">
+  <div class="runner-output">
+    <div class="runner-output-container">
+      <div class="row">
+        <div class="col-sm-10 offest-sm-1 tabset-wrapper">
+          <tabset>
+            <tab #narrative heading="Narrative" id="tab1"
+              >Sed suscipit lacus id arcu malesuada, eu elementum nulla feugiat. Etiam erat magna,
+              feugiat et ligula in, eleifend scelerisque dolor. Donec nulla nunc, maximus sed ornare
+              a, vulputate quis sem.</tab
+            >
+            <tab heading="Raw JSON"
+              ><code>{{ dummyJson }}</code></tab
+            >
+            <tab heading="Errors">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+              exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </tab>
+          </tabset>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
+<!--Studio Runner layout ends -->
 
-<form class="mt-4">
+<form style="margin-top: 200px">
   <div class="form-group">
     <label for="exampleFormControlTextarea1"><b>Practise pasting your text here</b></label>
     <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
