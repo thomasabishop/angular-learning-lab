@@ -24,7 +24,8 @@
     "noUnusedParameters": true,
     "pretty": true,
     "strict": true,
-    "strictPropertyInitialization": false
+    "strictPropertyInitialization": false,
+    "noImplicitAny": false
   },
   "include": ["**/*.ts"]
 }

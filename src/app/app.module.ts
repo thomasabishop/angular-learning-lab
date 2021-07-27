@@ -1,5 +1,6 @@
 import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
+import {HttpClientModule} from '@angular/common/http';
 import {TabsModule} from 'ngx-bootstrap/tabs';
 import {HighlightModule, HIGHLIGHT_OPTIONS} from 'ngx-highlightjs';
 import {AppComponent} from './app.component';
@@ -16,6 +17,7 @@ import {InputLoopComponent} from './input-loop/input-loop.component';
 import {CondRenderBlockComponent} from './cond-render-block/cond-render-block.component';
 import {CounterComponent} from './counter/counter.component';
 import {CopyPasteComponent} from './copy-paste/copy-paste.component';
+import {ApiInteractionComponent} from './api-interaction/api-interaction.component';
 
 @NgModule({
   declarations: [
@@ -32,10 +34,12 @@ import {CopyPasteComponent} from './copy-paste/copy-paste.component';
     CondRenderBlockComponent,
     CounterComponent,
     CopyPasteComponent,
+    ApiInteractionComponent,
   ],
   imports: [
     BrowserModule,
     HighlightModule,
+    HttpClientModule,
     TabsModule.forRoot(),
     RouterModule.forRoot([
       {
@@ -61,6 +65,10 @@ import {CopyPasteComponent} from './copy-paste/copy-paste.component';
       {
         path: 'copy-paste',
         component: CopyPasteComponent,
+      },
+      {
+        path: 'api-interaction',
+        component: ApiInteractionComponent,
       },
     ]),
   ],

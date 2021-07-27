@@ -22,7 +22,7 @@ export const componentList: IComponentList[] = [
   },
   {
     component: 'Working with APIs',
-    path: '/working-with-apis',
+    path: '/api-interaction',
   },
   {
     component: 'Copy and paste text',
