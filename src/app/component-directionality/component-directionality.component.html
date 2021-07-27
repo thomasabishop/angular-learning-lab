@@ -1,0 +1,20 @@
+<h2 class="h3">Interactions between components and the directionality of data flow</h2>
+<hr />
+
+<h3 class="h4">Passing iterative data from parent to child with <code>@Input</code></h3>
+<p>
+  We iterate through an array of objects possessed by <i>this</i> (parent) component and output
+  their data via a child template. We use the <code>@Input</code> decorator on the child which
+  specifies that it can receive data that matches the following interface:
+</p>
+<pre><code [highlight]="bidirectionalInterface"></code></pre>
+
+<p>The parent data fulfulls this contract so the data is successfully rendered via the child.</p>
+<div class="card">
+  <div class="card-body">
+    <app-input-loop
+      *ngFor="let lang of progLangs"
+      [programmingLanguageData]="lang"
+    ></app-input-loop>
+  </div>
+</div>

@@ -18,6 +18,7 @@ import {CondRenderBlockComponent} from './cond-render-block/cond-render-block.co
 import {CounterComponent} from './counter/counter.component';
 import {CopyPasteComponent} from './copy-paste/copy-paste.component';
 import {ApiInteractionComponent} from './api-interaction/api-interaction.component';
+import {ComponentDirectionalityComponent} from './component-directionality/component-directionality.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import {ApiInteractionComponent} from './api-interaction/api-interaction.compone
     CounterComponent,
     CopyPasteComponent,
     ApiInteractionComponent,
+    ComponentDirectionalityComponent,
   ],
   imports: [
     BrowserModule,
@@ -69,6 +71,10 @@ import {ApiInteractionComponent} from './api-interaction/api-interaction.compone
       {
         path: 'api-interaction',
         component: ApiInteractionComponent,
+      },
+      {
+        path: 'component-directionality',
+        component: ComponentDirectionalityComponent,
       },
     ]),
   ],

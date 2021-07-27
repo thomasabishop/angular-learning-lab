@@ -28,4 +28,8 @@ export const componentList: IComponentList[] = [
     component: 'Copy and paste text',
     path: '/copy-paste',
   },
+  {
+    component: 'Component interaction and data directionality',
+    path: '/component-directionality',
+  },
 ];
