@@ -1,7 +1,7 @@
 <h2 class="h3">Interactions between components and the directionality of data flow</h2>
 <hr />
 
-<h3 class="h4">Passing iterative data from parent to child with <code>@Input</code></h3>
+<h3 class="h4">Passing data from parent to child with <code>@Input</code></h3>
 <p>
   We iterate through an array of objects possessed by <i>this</i> (parent) component and output
   their data via a child template. We use the <code>@Input</code> decorator on the child which
@@ -16,5 +16,25 @@
       *ngFor="let lang of progLangs"
       [programmingLanguageData]="lang"
     ></app-input-loop>
+  </div>
+</div>
+
+<h3 class="h4">Passing data from child to parent with <code>@Output</code></h3>
+<p>
+  This time, we pass data in the other direction: from a child component up to the parent component.
+  Here, the parent consists of a simple list. When the user enters data via the form (which
+  constitutes the child component) an event is emitted which contains the inputted value. The parent
+  then receives this event and updates the list using a method that is primed to receive events
+  matching the child type as a parameter.
+</p>
+
+<div class="card">
+  <div class="card-body">
+    <h4 class="h5">Grocery list</h4>
+    <p class="font-weight-light">Use the form below to add new items to the list.</p>
+    <ul *ngFor="let item of groceryItems">
+      <li>{{ item }}</li>
+    </ul>
+    <app-child-to-parent (newGroceryItemEvent)="updateGroceryList($event)"></app-child-to-parent>
   </div>
 </div>

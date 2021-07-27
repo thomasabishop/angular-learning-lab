@@ -19,6 +19,7 @@ import {CounterComponent} from './counter/counter.component';
 import {CopyPasteComponent} from './copy-paste/copy-paste.component';
 import {ApiInteractionComponent} from './api-interaction/api-interaction.component';
 import {ComponentDirectionalityComponent} from './component-directionality/component-directionality.component';
+import { ChildToParentComponent } from './child-to-parent/child-to-parent.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import {ComponentDirectionalityComponent} from './component-directionality/compo
     CopyPasteComponent,
     ApiInteractionComponent,
     ComponentDirectionalityComponent,
+    ChildToParentComponent,
   ],
   imports: [
     BrowserModule,

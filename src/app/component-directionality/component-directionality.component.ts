@@ -16,5 +16,11 @@ export class ComponentDirectionalityComponent implements OnInit {
       usagePercent: number;
     }    
   `;
+
+  public groceryItems = ['bananas', 'spinach'];
+
+  public updateGroceryList(item: string): void {
+    this.groceryItems.push(item);
+  }
   ngOnInit(): void {}
 }

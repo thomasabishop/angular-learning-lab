@@ -1,0 +1,16 @@
+<form>
+  <div class="form-row">
+    <div class="col">
+      <input type="text" class="form-control" #newGroceryItem />
+    </div>
+    <div class="col">
+      <button
+        class="btn btn-outline-primary"
+        type="button"
+        (click)="addNewGroceryItem(newGroceryItem.value)"
+      >
+        Add to list
+      </button>
+    </div>
+  </div>
+</form>
