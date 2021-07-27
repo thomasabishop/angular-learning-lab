@@ -6,12 +6,17 @@ import {Component, OnInit} from '@angular/core';
   styleUrls: ['./click-events.component.less'],
 })
 export class ClickEventsComponent implements OnInit {
-  constructor() {}
+  public inputVariable = 'start value';
+  public basicClickMessage = 'You clicked the button. Well done.';
+  public printInput = `<input type="text" class="form-control" (input)="updateVariable($event.data)" />`;
+  public updateVariable(str: string): void {
+    this.inputVariable = str;
+    console.log(str);
+  }
 
-  ngOnInit(): void {}
-  test = 'test';
-  basicClickMessage = 'You clicked the button. Well done.';
-  basicClickEvent(): void {
+  public basicClickEvent(): void {
     alert(this.basicClickMessage);
   }
+
+  ngOnInit(): void {}
 }

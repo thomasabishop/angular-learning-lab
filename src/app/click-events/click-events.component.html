@@ -1,6 +1,7 @@
-<h2 class="h3">Click events</h2>
+<h2 class="h3">Event binding</h2>
 <hr />
-<h3 class="h4">Basic click event</h3>
+<h3 class="h4">Click events</h3>
+<h4 class="h5">Basic click event</h4>
 <p>On button click an alert is displayed in the window.</p>
 <div class="card">
   <div class="card-body">
@@ -8,7 +9,7 @@
   </div>
 </div>
 
-<h3 class="h4">Click counter</h3>
+<h4 class="h5">Click counter</h4>
 <p>
   A basic click component with increment and decrement functions. The decrement function is limited
   to positive integers. When the 'Invoke service' button is clicked, the current value of the
@@ -20,3 +21,38 @@
     <app-counter></app-counter>
   </div>
 </div>
+
+<h3 class="h4">Using <code>$event</code></h3>
+<p>
+  The examples above work by firing a method when a click occurs. These events are the built-in
+  default events of the browser. We are also able to write our own custom events. An example is
+  given in the project
+  <a routerLink="/component-directionality">Component interaction and data directionality</a>.
+</p>
+<p>
+  One of the constructs we use when we write custom events is <code>$event</code>. This is unique to
+  Angular and is a special type of template variable that can be applied to (typically) UI-elements.
+  When applied it captures whatever event is associated with the particular element. The example
+  below shows this in action on an input element. We create a variable in the class component and
+  have this update based on what the user types in the input. This is tied to the
+  <code>input</code> event but we could also use <code>onChange</code> or <code>onKeydown</code>.
+</p>
+
+<div class="card">
+  <div class="card-body">
+    <p>
+      <code>{{ inputVariable }}</code>
+    </p>
+    <form class="mb-2">
+      <input type="text" class="form-control" (input)="updateVariable($event.data)" />
+    </form>
+  </div>
+</div>
+
+<p>
+  Whatever you type, each character is being logged because we are capturing the data that belongs
+  to the input event with the following line:
+</p>
+<pre>
+    <code [highlight]="printInput"></code>
+</pre>

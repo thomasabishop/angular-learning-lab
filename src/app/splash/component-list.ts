@@ -5,7 +5,7 @@ interface IComponentList {
 
 export const componentList: IComponentList[] = [
   {
-    component: 'Click events',
+    component: 'Event binding',
     path: '/click-events',
   },
   {
