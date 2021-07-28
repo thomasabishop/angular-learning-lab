@@ -1,7 +1,7 @@
 <h2 class="h3">Copy and paste text mock-up</h2>
 <hr />
 <div class="d-flex justify-content-end">
-  <button (click)="copy(narrative.textContent)" type="button" class="btn btn-primary">
+  <button (click)="copyTabContents(tabset.active)" type="button" class="btn btn-primary">
     Copy Text
   </button>
 </div>
@@ -12,19 +12,20 @@
     <div class="runner-output-container">
       <div class="row">
         <div class="col-sm-10 offest-sm-1 tabset-wrapper">
-          <tabset>
-            <tab #narrative heading="Narrative" id="tab1"
+          <tabset #tabset>
+            <tab #narrative heading="Narrative" id="tab1" (selectTab)="onSelect($event)"
               >Sed suscipit lacus id arcu malesuada, eu elementum nulla feugiat. Etiam erat magna,
               feugiat et ligula in, eleifend scelerisque dolor. Donec nulla nunc, maximus sed ornare
               a, vulputate quis sem.</tab
             >
-            <tab heading="Raw JSON"
+            <tab heading="Raw JSON" (selectTab)="onSelect($event)"
               ><code>{{ dummyJson }}</code></tab
             >
-            <tab heading="Errors">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-              exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            <tab heading="Errors (Rich text)" (selectTab)="onSelect($event)">
+              Lorem ipsum <b>dolor sit amet</b>, consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et <i>dolore magna aliqua</i>. Ut enim
+              <span style="color: red">ad minim veniam</span>, quis nostrud exercitation ullamco
+              laboris nisi ut aliquip ex ea commodo consequat.
             </tab>
           </tabset>
         </div>

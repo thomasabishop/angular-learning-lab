@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {TabDirective} from 'ngx-bootstrap/tabs';
 import {CopyToClipboardService} from './copy-to-clipboard.service';
 import {dummyJson} from './dummyJson';
 
@@ -8,11 +9,19 @@ import {dummyJson} from './dummyJson';
   styleUrls: ['./copy-paste.component.less'],
 })
 export class CopyPasteComponent implements OnInit {
-  constructor(public clipboard: CopyToClipboardService) {}
+  constructor(public clipboardService: CopyToClipboardService) {}
   public dummyJson = dummyJson;
+  public value: any;
   public ngOnInit(): void {}
 
-  public copy(text: string): void {
-    this.clipboard.copyToClipboard(text);
+  public onSelect(data: TabDirective): void {
+    const tabContents = data.elementRef.nativeElement.innerHTML;
+    this.value = tabContents;
+    console.log(this.value);
+  }
+
+  public copyTabContents(text: string): void {
+    //   this.clipboardservice.writetoclipboard(document.queryselector('tab-pane.active'));
+    console.log(text);
   }
 }
