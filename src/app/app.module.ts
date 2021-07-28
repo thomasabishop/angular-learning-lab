@@ -19,7 +19,8 @@ import {CounterComponent} from './counter/counter.component';
 import {CopyPasteComponent} from './copy-paste/copy-paste.component';
 import {ApiInteractionComponent} from './api-interaction/api-interaction.component';
 import {ComponentDirectionalityComponent} from './component-directionality/component-directionality.component';
-import { ChildToParentComponent } from './child-to-parent/child-to-parent.component';
+import {ChildToParentComponent} from './child-to-parent/child-to-parent.component';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -44,6 +45,7 @@ import { ChildToParentComponent } from './child-to-parent/child-to-parent.compon
     BrowserModule,
     HighlightModule,
     HttpClientModule,
+    FormsModule,
     TabsModule.forRoot(),
     RouterModule.forRoot([
       {
