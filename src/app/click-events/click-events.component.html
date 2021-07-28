@@ -22,12 +22,13 @@
   </div>
 </div>
 
-<h3 class="h4">Using <code>$event</code></h3>
+<h3 class="h4">Using <code>$event</code> for one-way event binding</h3>
 <p>
-  The examples above work by firing a method when a click occurs. These events are the built-in
-  default events of the browser. We are also able to write our own custom events. An example is
-  given in the project
-  <a routerLink="/component-directionality">Component interaction and data directionality</a>.
+  The examples above work by firing a method when a click occurs. Click events are obviously one of
+  the built-in events provided by the browser. We are also able to write our own custom events. An
+  example is given in the project
+  <a routerLink="/component-directionality">Component interaction and data directionality</a> where
+  an event tied to a form input bubbles up to its parent container.
 </p>
 <p>
   One of the constructs we use when we write custom events is <code>$event</code>. This is unique to
@@ -44,15 +45,30 @@
       <code>{{ inputVariable }}</code>
     </p>
     <form class="mb-2">
-      <input type="text" class="form-control" (input)="updateVariable($event.data)" />
+      <input type="text" class="form-control" (input)="updateVariable($event)" />
     </form>
   </div>
 </div>
 
 <p>
-  Whatever you type, each character is being logged because we are capturing the data that belongs
-  to the input event with the following line:
+  Whatever you type it will be logged because we are capturing the value property of the event
+  object with the following line in the template:
 </p>
 <pre>
     <code [highlight]="printInput"></code>
 </pre>
+
+<p>We do this in the component class with the following:</p>
+
+<pre>
+    <code [highlight]="printComponent"></code>
+</pre>
+
+<div class="alert alert-primary" role="alert">
+  This is an example of <b>one-way data binding</b> where the data is going from child to parent.
+  Another example of one-way data binding is provided
+  <a routerLink="/component-directionality">here</a>, where we pass data from parent to child.
+</div>
+
+<h3 class="h4">Two-way event binding</h3>
+<div class="alert alert-danger" role="alert">Come back to this</div>
