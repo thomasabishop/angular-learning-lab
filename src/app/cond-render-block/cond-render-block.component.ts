@@ -11,9 +11,8 @@ interface IFruits {
   styleUrls: ['./cond-render-block.component.less'],
 })
 export class CondRenderBlockComponent implements OnInit {
-  constructor() {}
-
-  ngOnInit(): void {}
   @Input()
-  dataToConditionallyRender!: IFruits;
+  public dataToConditionallyRender!: IFruits;
+
+  public ngOnInit(): void {}
 }

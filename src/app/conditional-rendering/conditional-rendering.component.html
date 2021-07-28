@@ -14,6 +14,29 @@
   </div>
 </div>
 
+<h3 class="h4">Variation</h3>
+<p>
+  This variation is a slight change on the above. The logic is the same (rendering is controlled by
+  a boolean) but now this state is managed by a button. In addition we use an
+  <code>ng-template</code> block combined with an else condition to display text in the
+  <code>false</code> scenario. But let's be clear: it is not the case that we are toggling between
+  two text blocks by keeping a single text block in the DOM and updating its contents. Rather, in
+  the <code>false</code> case, the first text block isn't injected into the DOM at all and a new
+  element ('Now you don't') is injected.
+</p>
+
+<div class="conditional-render">
+  <div class="card">
+    <div class="card-body">
+      <p *ngIf="renderText; else dontRenderText">{{ buttonRenderText }}</p>
+      <ng-template #dontRenderText>
+        <p>Now you don't</p>
+      </ng-template>
+      <button class="btn btn-primary" (click)="onShowHideText()">Show, hide</button>
+    </div>
+  </div>
+</div>
+
 <h3 class="h4">Render if data is returned</h3>
 <div class="card">
   <div class="card-body">

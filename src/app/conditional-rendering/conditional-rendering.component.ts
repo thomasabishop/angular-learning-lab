@@ -6,12 +6,12 @@ import {Component, OnInit} from '@angular/core';
   styleUrls: ['./conditional-rendering.component.less'],
 })
 export class ConditionalRenderingComponent implements OnInit {
-  constructor() {}
+  public buttonRenderText = 'Now you see me';
 
-  ngOnInit(): void {}
+  public renderText = true;
 
-  languages = ['json', 'javascript', 'typescript', 'html'];
-  codeOne = `
+  public languages = ['json', 'javascript', 'typescript', 'html'];
+  public codeOne = `
   fruits = [
     undefined,
     {
@@ -33,17 +33,18 @@ export class ConditionalRenderingComponent implements OnInit {
     },
   ];
   `;
-  codeTwo = `<!--cond-rend-block.component.html-->
+  public codeTwo = `<!--cond-rend-block.component.html-->
   <ul *ngIf="dataToConditionallyRender">
    <li>{{ dataToConditionallyRender.fruit }}:</li>
     <ul>
      <li>{{ dataToConditionallyRender.weight }}g</li>
     </ul>
   </ul>`;
-  codeThree = `<!--conditional-rendering.component.html-->
+
+  public codeThree = `<!--conditional-rendering.component.html-->
   <app-cond-render-block *ngFor="let fruit of fruits" [dataToConditionallyRender]="fruit"> </app-cond-render-block>`;
 
-  codeFour = `<!--cond-rend-block.component.html-->
+  public codeFour = `<!--cond-rend-block.component.html-->
   <ul *ngIf="dataToConditionallyRender && dataToConditionallyRender.weight">
    <li>{{ dataToConditionallyRender.fruit }}:</li>
     <ul>
@@ -51,7 +52,8 @@ export class ConditionalRenderingComponent implements OnInit {
     </ul>
   </ul>
     `;
-  fruits = [
+
+  public fruits = [
     undefined,
     {
       fruit: 'banana',
@@ -75,4 +77,9 @@ export class ConditionalRenderingComponent implements OnInit {
       weight: 120,
     },
   ];
+
+  public onShowHideText(): void {
+    this.renderText === true ? (this.renderText = false) : (this.renderText = true);
+  }
+  public ngOnInit(): void {}
 }
