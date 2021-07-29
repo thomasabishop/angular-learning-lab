@@ -9,17 +9,28 @@ import {testJson} from './dummyJson';
   styleUrls: ['./copy-paste.component.less'],
 })
 export class CopyPasteComponent {
+  /**
+   * Write active tab text contents to clipboard.
+   * @param clipboardService
+   */
   constructor(private clipboardService: CopyToClipboardService) {}
   @ViewChild(TabsetComponent) public tabset: TabsetComponent;
-
   public testJson = testJson;
 
-  private getActiveTabData(): string {
-    const activeTab = this.tabset.tabs.filter((tab) => tab.active);
-    return activeTab[0].elementRef.nativeElement.innerText;
-  }
+  /**
+   * Write text to clipboard
+   */
   public onCopyActiveTabData(): void {
     const activeTabData = this.getActiveTabData();
     this.clipboardService.writeToClipboard(activeTabData);
+  }
+
+  /**
+   * Identify active tab and
+   * @returns - active tab body text
+   */
+  private getActiveTabData(): string {
+    const activeTab = this.tabset.tabs.filter((tab) => tab.active);
+    return activeTab[0].elementRef.nativeElement.innerText;
   }
 }
