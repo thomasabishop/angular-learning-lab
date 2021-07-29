@@ -21,6 +21,7 @@ import {ApiInteractionComponent} from './api-interaction/api-interaction.compone
 import {ComponentDirectionalityComponent} from './component-directionality/component-directionality.component';
 import {ChildToParentComponent} from './child-to-parent/child-to-parent.component';
 import {FormsModule} from '@angular/forms';
+import { CopyButtonComponent } from './copy-button/copy-button.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import {FormsModule} from '@angular/forms';
     ApiInteractionComponent,
     ComponentDirectionalityComponent,
     ChildToParentComponent,
+    CopyButtonComponent,
   ],
   imports: [
     BrowserModule,

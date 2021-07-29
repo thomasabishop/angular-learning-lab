@@ -1,27 +1,25 @@
-import {Component, OnInit} from '@angular/core';
-import {TabDirective} from 'ngx-bootstrap/tabs';
+import {Component, ViewChild} from '@angular/core';
+import {TabsetComponent} from 'ngx-bootstrap/tabs';
 import {CopyToClipboardService} from './copy-to-clipboard.service';
-import {dummyJson} from './dummyJson';
+import {testJson} from './dummyJson';
 
 @Component({
   selector: 'app-copy-paste',
   templateUrl: './copy-paste.component.html',
   styleUrls: ['./copy-paste.component.less'],
 })
-export class CopyPasteComponent implements OnInit {
-  constructor(public clipboardService: CopyToClipboardService) {}
-  public dummyJson = dummyJson;
-  public value: any;
-  public ngOnInit(): void {}
+export class CopyPasteComponent {
+  constructor(private clipboardService: CopyToClipboardService) {}
+  @ViewChild(TabsetComponent) public tabset: TabsetComponent;
 
-  public onSelect(data: TabDirective): void {
-    const tabContents = data.elementRef.nativeElement.innerHTML;
-    this.value = tabContents;
-    console.log(this.value);
+  public testJson = testJson;
+
+  private getActiveTabData(): string {
+    const activeTab = this.tabset.tabs.filter((tab) => tab.active);
+    return activeTab[0].elementRef.nativeElement.innerText;
   }
-
-  public copyTabContents(text: string): void {
-    //   this.clipboardservice.writetoclipboard(document.queryselector('tab-pane.active'));
-    console.log(text);
+  public onCopyActiveTabData(): void {
+    const activeTabData = this.getActiveTabData();
+    this.clipboardService.writeToClipboard(activeTabData);
   }
 }

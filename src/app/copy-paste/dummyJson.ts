@@ -1,4 +1,4 @@
-export const dummyJson = `
+export const testJson = `
 {
 	"random": 94,
 	"random float": 54.859,

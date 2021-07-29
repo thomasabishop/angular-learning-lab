@@ -20,13 +20,4 @@ export class CopyToClipboardService {
       navigator.clipboard.writeText(targetText);
     }
   }
-
-  /**
-   * Handling for rich text with clipboard API is as follows:  
-  private copyRichtextToClipboard(targetText: string): void {
-    const richtextBlob = new Blob([targetText], {type: 'text/html'});
-    const copiedRichtext = new ClipboardItem({'text/html': richtextBlob});
-    navigator.clipboard.write([copiedRichtext])
-  }
-  */
 }
