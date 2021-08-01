@@ -32,4 +32,8 @@ export const componentList: IComponentList[] = [
     component: 'Component interaction and data directionality',
     path: '/component-directionality',
   },
+  {
+    component: 'Learning Testing',
+    path: 'learning-testing',
+  },
 ];

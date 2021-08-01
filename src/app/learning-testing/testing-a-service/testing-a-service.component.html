@@ -1,0 +1,11 @@
+<div class="card">
+  <div class="card-body">
+    <form>
+      <label for="enter-text">Please enter some text</label>
+      <input #enterText type="text" class="form form-control" id="enter-text" /> <br />
+      <button (click)="onCountCharacters(enterText.value)" class="btn btn-outline-primary btn-sm">
+        Enter
+      </button>
+    </form>
+  </div>
+</div>

@@ -21,6 +21,8 @@ import {ComponentDirectionalityComponent} from './component-directionality/compo
 import {ChildToParentComponent} from './child-to-parent/child-to-parent.component';
 import {FormsModule} from '@angular/forms';
 import {CopyButtonComponent} from './copy-button/copy-button.component';
+import {LearningTestingComponent} from './learning-testing/learning-testing.component';
+import { TestingAServiceComponent } from './learning-testing/testing-a-service/testing-a-service.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +42,8 @@ import {CopyButtonComponent} from './copy-button/copy-button.component';
     ComponentDirectionalityComponent,
     ChildToParentComponent,
     CopyButtonComponent,
+    LearningTestingComponent,
+    TestingAServiceComponent,
   ],
   imports: [
     BrowserModule,
@@ -75,6 +79,10 @@ import {CopyButtonComponent} from './copy-button/copy-button.component';
       {
         path: 'component-directionality',
         component: ComponentDirectionalityComponent,
+      },
+      {
+        path: 'learning-testing',
+        component: LearningTestingComponent,
       },
     ]),
   ],
