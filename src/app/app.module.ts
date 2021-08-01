@@ -17,11 +17,10 @@ import {InputLoopComponent} from './input-loop/input-loop.component';
 import {CondRenderBlockComponent} from './cond-render-block/cond-render-block.component';
 import {CounterComponent} from './counter/counter.component';
 import {CopyPasteComponent} from './copy-paste/copy-paste.component';
-import {ApiInteractionComponent} from './api-interaction/api-interaction.component';
 import {ComponentDirectionalityComponent} from './component-directionality/component-directionality.component';
 import {ChildToParentComponent} from './child-to-parent/child-to-parent.component';
 import {FormsModule} from '@angular/forms';
-import { CopyButtonComponent } from './copy-button/copy-button.component';
+import {CopyButtonComponent} from './copy-button/copy-button.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +37,6 @@ import { CopyButtonComponent } from './copy-button/copy-button.component';
     CondRenderBlockComponent,
     CounterComponent,
     CopyPasteComponent,
-    ApiInteractionComponent,
     ComponentDirectionalityComponent,
     ChildToParentComponent,
     CopyButtonComponent,
@@ -73,10 +71,6 @@ import { CopyButtonComponent } from './copy-button/copy-button.component';
       {
         path: 'copy-paste',
         component: CopyPasteComponent,
-      },
-      {
-        path: 'api-interaction',
-        component: ApiInteractionComponent,
       },
       {
         path: 'component-directionality',
