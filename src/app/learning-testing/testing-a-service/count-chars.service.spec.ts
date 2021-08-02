@@ -6,7 +6,9 @@ describe('CountCharsService', () => {
   let service: CountCharsService;
 
   beforeEach(() => {
-    TestBed.configureTestingModule({});
+    TestBed.configureTestingModule({
+      providers: [CountCharsService],
+    });
     service = TestBed.inject(CountCharsService);
   });
 
@@ -14,7 +16,12 @@ describe('CountCharsService', () => {
     expect(service).toBeTruthy();
   });
 
-  it('should return the char length of a string', () => {
+  it('should return the char length of a string 1', () => {
     expect(service.countCharacters('abc')).toBe(3);
+    expect(service.countCharacters('abcd')).toBe(4);
+  });
+
+  it('should return the char length of a string 2', () => {
+    expect(service.countCharacters('hello')).toBeGreaterThan(1);
   });
 });
