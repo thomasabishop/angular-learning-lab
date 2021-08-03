@@ -16,12 +16,8 @@ describe('CountCharsService', () => {
     expect(service).toBeTruthy();
   });
 
-  it('should return the char length of a string 1', () => {
+  it('should return the char length of a string', () => {
     expect(service.countCharacters('abc')).toBe(3);
-    expect(service.countCharacters('abcd')).toBe(4);
-  });
-
-  it('should return the char length of a string 2', () => {
     expect(service.countCharacters('hello')).toBeGreaterThan(1);
   });
 });

@@ -23,6 +23,8 @@ import {FormsModule} from '@angular/forms';
 import {CopyButtonComponent} from './copy-button/copy-button.component';
 import {LearningTestingComponent} from './learning-testing/learning-testing.component';
 import { TestingAServiceComponent } from './learning-testing/testing-a-service/testing-a-service.component';
+import { ClassOnlyComponentTestComponent } from './learning-testing/class-only-component-test/class-only-component-test.component';
+import { ClassOnlyDepsComponent } from './learning-testing/class-only-deps/class-only-deps.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +46,8 @@ import { TestingAServiceComponent } from './learning-testing/testing-a-service/t
     CopyButtonComponent,
     LearningTestingComponent,
     TestingAServiceComponent,
+    ClassOnlyComponentTestComponent,
+    ClassOnlyDepsComponent,
   ],
   imports: [
     BrowserModule,

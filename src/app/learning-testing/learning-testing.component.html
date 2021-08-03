@@ -12,3 +12,30 @@
   is handled by a service <code>CountCharsService.</code>
 </p>
 <app-testing-a-service></app-testing-a-service>
+
+<h3 class="h4">Testing components</h3>
+<p>
+  The tests applied in this section all focus on testing a component. There are three variations:
+</p>
+<ul>
+  <li>Testing the component class-only <i>without</i> dependencies</li>
+  <li>Testing the component class-only <i>with</i> dependencies</li>
+  <li>Testing the component with DOM-specific controls</li>
+</ul>
+
+<h4 class="h5">Testing component class-only</h4>
+<app-class-only-component-test></app-class-only-component-test>
+<p>
+  Here the unit test simply confirms that the property which holds the mood value begins as 'happy'
+  and then changes to 'sad' after the click event. This is achieved purely by calling the method
+  that associated with the click. There is no engagement with the UI or the DOM itself.
+</p>
+
+<h4 class="h5">Testing component class-only with dependencies</h4>
+<p>
+  Here we call the date via a service that executes within the
+  <code>ngOnInit</code> lifecycle method and outputs using a pipe. This is so that we can create a
+  class test which requires a service. As the date will always be different, we use a test rule that
+  checks the date format against a regex string.
+</p>
+<app-class-only-deps></app-class-only-deps>
