@@ -1,0 +1,18 @@
+<div class="card">
+  <div class="card-body">
+    <div class="row">
+      <div class="col">
+        <button (click)="outputArray()" class="btn-outline-primary btn">Click</button>
+      </div>
+      <div class="col">
+        <h6>Parent-level output:</h6>
+        <p class="parent-output">{{ currentDatum }}</p>
+      </div>
+      <div class="col">
+        <h6>Child-level output:</h6>
+
+        <app-lister [arrayElement]="currentDatum"></app-lister>
+      </div>
+    </div>
+  </div>
+</div>

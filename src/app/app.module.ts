@@ -25,6 +25,8 @@ import {LearningTestingComponent} from './learning-testing/learning-testing.comp
 import { TestingAServiceComponent } from './learning-testing/testing-a-service/testing-a-service.component';
 import { ClassOnlyComponentTestComponent } from './learning-testing/class-only-component-test/class-only-component-test.component';
 import { ClassOnlyDepsComponent } from './learning-testing/class-only-deps/class-only-deps.component';
+import { TestingDomComponent } from './learning-testing/testing-dom/testing-dom.component';
+import { ListerComponent } from './learning-testing/testing-dom/lister/lister.component';
 
 @NgModule({
   declarations: [
@@ -48,6 +50,8 @@ import { ClassOnlyDepsComponent } from './learning-testing/class-only-deps/class
     TestingAServiceComponent,
     ClassOnlyComponentTestComponent,
     ClassOnlyDepsComponent,
+    TestingDomComponent,
+    ListerComponent,
   ],
   imports: [
     BrowserModule,
