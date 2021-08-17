@@ -27,7 +27,7 @@ export const componentList: IComponentList[] = [
   },
   {
     component: 'Working with APIs',
-    category: 'General',
+    category: 'WIP',
     path: '/api-interaction',
   },
   {
@@ -42,7 +42,7 @@ export const componentList: IComponentList[] = [
   },
   {
     component: 'Learning Testing',
-    category: 'Udemy Exercise',
+    category: 'General',
     path: 'learning-testing',
   },
 ];

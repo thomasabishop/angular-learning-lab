@@ -1,25 +1,21 @@
 <div class="row">
-  <div
-    class="col-sm d-flex justify-content-center justify-content-lg-start"
-    *ngFor="let component of COMPONENT_LIST"
-  >
+  <div class="col d-flex justify-content-center" *ngFor="let component of COMPONENT_LIST">
     <div class="card mb-3" style="width: 18rem">
-      <div class="card-header d-flex justify-content-end">
+      <div class="card-header">
         <span
           class="badge"
           [ngClass]="{
             'badge-primary': component.category == 'General',
             'badge-warning': component.category === 'Udemy Exercise',
-            'badge-success': component.category === 'Work-related'
+            'badge-success': component.category === 'Work-related',
+            'badge-danger': component.category === 'WIP'
           }"
           >{{ component.category }}</span
         >
       </div>
       <div class="card-body">
         <h5 class="card-title">{{ component.component }}</h5>
-        <button class="btn btn-sm btn-outline-primary" routerLink="{{ component.path }}">
-          Visit
-        </button>
+        <a class="" routerLink="{{ component.path }}"> Go</a>
       </div>
     </div>
   </div>
