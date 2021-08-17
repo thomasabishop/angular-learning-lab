@@ -4,9 +4,22 @@
     *ngFor="let component of COMPONENT_LIST"
   >
     <div class="card mb-3" style="width: 18rem">
+      <div class="card-header d-flex justify-content-end">
+        <span
+          class="badge"
+          [ngClass]="{
+            'badge-primary': component.category == 'General',
+            'badge-warning': component.category === 'Udemy Exercise',
+            'badge-success': component.category === 'Work-related'
+          }"
+          >{{ component.category }}</span
+        >
+      </div>
       <div class="card-body">
         <h5 class="card-title">{{ component.component }}</h5>
-        <a routerLink="{{ component.path }}" class="card-link">Visit</a>
+        <button class="btn btn-sm btn-outline-primary" routerLink="{{ component.path }}">
+          Visit
+        </button>
       </div>
     </div>
   </div>

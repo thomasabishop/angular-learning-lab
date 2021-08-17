@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component} from '@angular/core';
 import {componentList} from './component-list';
 
 @Component({
@@ -6,9 +6,6 @@ import {componentList} from './component-list';
   templateUrl: './splash.component.html',
   styleUrls: ['./splash.component.less'],
 })
-export class SplashComponent implements OnInit {
-  constructor() {}
-
-  ngOnInit(): void {}
-  COMPONENT_LIST = componentList;
+export class SplashComponent {
+  public COMPONENT_LIST = componentList;
 }

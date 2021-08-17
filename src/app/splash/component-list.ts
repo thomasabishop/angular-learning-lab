@@ -1,39 +1,48 @@
 interface IComponentList {
   component: string;
+  category: string;
   path: string;
 }
 
 export const componentList: IComponentList[] = [
   {
     component: 'Event binding',
+    category: 'General',
     path: '/click-events',
   },
   {
     component: 'Styling methods',
+    category: 'General',
     path: '/styling-conventions',
   },
   {
     component: 'Iterating through data',
+    category: 'General',
     path: '/data-iterate',
   },
   {
     component: 'Conditional rendering',
+    category: 'General',
     path: '/conditional-rendering',
   },
   {
     component: 'Working with APIs',
+    category: 'General',
     path: '/api-interaction',
   },
   {
     component: 'Copy and paste text',
+    category: 'Work-related',
     path: '/copy-paste',
   },
   {
     component: 'Component interaction and data directionality',
+    category: 'General',
     path: '/component-directionality',
   },
   {
     component: 'Learning Testing',
+    category: 'Udemy Exercise',
     path: 'learning-testing',
   },
 ];
