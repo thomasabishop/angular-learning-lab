@@ -1,53 +1,61 @@
-<h2 class="h3">Copy and paste text mock-up</h2>
+<h2 class="h3">Copy and paste text</h2>
 <hr />
+<p>
+  This component was created to learn how to copy to the clipboard based on which view is active. It
+  also allows for the copying or rich-text and plain-text through the same method.
+</p>
 
 <!--Studio Runner layout starts -->
-<div class="studio-runner">
-  <div class="">
-    <div class="">
-      <div class="row">
-        <div class="col-sm-10 offest-sm-1 tabset-wrapper parent">
-          <button
-            class="copy-button button btn btn-sm btn-primary"
-            (click)="onCopyActiveTabContents()"
-          >
-            Copy data
-          </button>
-          <tabset>
-            <tab heading="Narrative">
-              <div class="narrative-column">
-                <div class="content">
-                  <p>
-                    Sed suscipit lacus id arcu malesuada, eu elementum nulla feugiat. Etiam erat
-                    magna, feugiat et ligula in, eleifend scelerisque dolor. Donec nulla nunc,
-                    maximus sed ornare a, vulputate quis sem.
-                  </p>
-                </div>
-              </div>
-              <div class="narrative-toolbar">Total word count: 8789</div>
-            </tab>
-            <tab heading="Raw JSON"
-              ><code>{{ testJson }}</code></tab
-            >
-            <tab heading="Errors (Rich text)">
-              Lorem ipsum <b>dolor sit amet</b>, consectetur adipiscing elit, sed do eiusmod tempor
-              incididunt ut labore et <i>dolore magna aliqua</i>. Ut enim
-              <span style="color: red">ad minim veniam</span>, quis nostrud exercitation ullamco
-              laboris nisi ut aliquip ex ea commodo consequat.
-            </tab>
-          </tabset>
+<div class="card">
+  <div class="card-body">
+    <div class="studio-runner">
+      <div class="">
+        <div class="">
+          <div class="row">
+            <div class="col-sm-10 offest-sm-1 tabset-wrapper parent">
+              <button
+                class="copy-button button btn btn-sm btn-primary"
+                (click)="onCopyActiveTabContents()"
+              >
+                Copy data
+              </button>
+              <tabset>
+                <tab heading="Narrative">
+                  <div class="narrative-column">
+                    <div class="content">
+                      <p>
+                        Sed suscipit lacus id arcu malesuada, eu elementum nulla feugiat. Etiam erat
+                        magna, feugiat et ligula in, eleifend scelerisque dolor. Donec nulla nunc,
+                        maximus sed ornare a, vulputate quis sem.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="narrative-toolbar">Total word count: 8789</div>
+                </tab>
+                <tab heading="Raw JSON"
+                  ><code>{{ testJson }}</code></tab
+                >
+                <tab heading="Errors (Rich text)">
+                  Lorem ipsum <b>dolor sit amet</b>, consectetur adipiscing elit, sed do eiusmod
+                  tempor incididunt ut labore et <i>dolore magna aliqua</i>. Ut enim
+                  <span style="color: red">ad minim veniam</span>, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat.
+                </tab>
+              </tabset>
+            </div>
+          </div>
         </div>
       </div>
     </div>
+
+    <!--Studio Runner layout ends -->
+
+    <form style="margin-top: 100px">
+      <div class="form-group">
+        <label for="exampleFormControlTextarea1"><b>Practise pasting your text here</b></label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="6"></textarea>
+      </div>
+      <button type="reset" class="btn btn-sm btn-danger">Clear</button>
+    </form>
   </div>
 </div>
-
-<!--Studio Runner layout ends -->
-
-<form style="margin-top: 100px">
-  <div class="form-group">
-    <label for="exampleFormControlTextarea1"><b>Practise pasting your text here</b></label>
-    <textarea class="form-control" id="exampleFormControlTextarea1" rows="6"></textarea>
-  </div>
-  <button type="reset" class="btn btn-sm btn-danger">Clear</button>
-</form>
