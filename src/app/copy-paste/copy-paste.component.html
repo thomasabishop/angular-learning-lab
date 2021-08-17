@@ -1,21 +1,31 @@
 <h2 class="h3">Copy and paste text mock-up</h2>
 <hr />
-<div class="d-flex justify-content-end">
-  <button class="button btn btn-sm btn-primary" (click)="onCopyActiveTabData()">Copy data</button>
-</div>
 
 <!--Studio Runner layout starts -->
 <div class="studio-runner">
-  <div class="runner-output">
-    <div class="runner-output-container">
+  <div class="">
+    <div class="">
       <div class="row">
-        <div class="col-sm-10 offest-sm-1 tabset-wrapper">
+        <div class="col-sm-10 offest-sm-1 tabset-wrapper parent">
+          <button
+            class="copy-button button btn btn-sm btn-primary"
+            (click)="onCopyActiveTabContents()"
+          >
+            Copy data
+          </button>
           <tabset>
-            <tab heading="Editor view"
-              >Sed suscipit lacus id arcu malesuada, eu elementum nulla feugiat. Etiam erat magna,
-              feugiat et ligula in, eleifend scelerisque dolor. Donec nulla nunc, maximus sed ornare
-              a, vulputate quis sem.</tab
-            >
+            <tab heading="Narrative">
+              <div class="narrative-column">
+                <div class="content">
+                  <p>
+                    Sed suscipit lacus id arcu malesuada, eu elementum nulla feugiat. Etiam erat
+                    magna, feugiat et ligula in, eleifend scelerisque dolor. Donec nulla nunc,
+                    maximus sed ornare a, vulputate quis sem.
+                  </p>
+                </div>
+              </div>
+              <div class="narrative-toolbar">Total word count: 8789</div>
+            </tab>
             <tab heading="Raw JSON"
               ><code>{{ testJson }}</code></tab
             >
@@ -31,11 +41,13 @@
     </div>
   </div>
 </div>
+
 <!--Studio Runner layout ends -->
 
-<form style="margin-top: 200px">
+<form style="margin-top: 100px">
   <div class="form-group">
     <label for="exampleFormControlTextarea1"><b>Practise pasting your text here</b></label>
-    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="6"></textarea>
   </div>
+  <button type="reset" class="btn btn-sm btn-danger">Clear</button>
 </form>
