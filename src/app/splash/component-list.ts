@@ -45,4 +45,9 @@ export const componentList: IComponentList[] = [
     category: 'General',
     path: 'learning-testing',
   },
+  {
+    component: 'Create and style components',
+    category: 'Udemy Exercise',
+    path: 'udemy-create-component',
+  },
 ];

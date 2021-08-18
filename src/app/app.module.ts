@@ -26,7 +26,9 @@ import {ClassOnlyComponentTestComponent} from './learning-testing/class-only-com
 import {ClassOnlyDepsComponent} from './learning-testing/class-only-deps/class-only-deps.component';
 import {TestingDomComponent} from './learning-testing/testing-dom/testing-dom.component';
 import {ListerComponent} from './learning-testing/testing-dom/lister/lister.component';
-
+import {UdemyCreateComponentComponent} from './udemy/udemy-create-component/udemy-create-component.component';
+import {WarningComponent} from './udemy/udemy-create-component/warning-alert/warning.component';
+import {SuccessComponent} from './udemy/udemy-create-component/success-alert/success.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -50,6 +52,9 @@ import {ListerComponent} from './learning-testing/testing-dom/lister/lister.comp
     ClassOnlyDepsComponent,
     TestingDomComponent,
     ListerComponent,
+    UdemyCreateComponentComponent,
+    WarningComponent,
+    SuccessComponent,
   ],
   imports: [
     BrowserModule,
@@ -89,6 +94,10 @@ import {ListerComponent} from './learning-testing/testing-dom/lister/lister.comp
       {
         path: 'learning-testing',
         component: LearningTestingComponent,
+      },
+      {
+        path: 'udemy-create-component',
+        component: UdemyCreateComponentComponent,
       },
     ]),
   ],

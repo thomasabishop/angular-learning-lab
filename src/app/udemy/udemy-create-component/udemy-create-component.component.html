@@ -1,0 +1,30 @@
+<h2 class="h3">Udemy Assignment 1: Practicing components</h2>
+<hr />
+<ol>
+  <li>
+    Create two new Components (manually or with the CLI): <code>WarningAlert</code> and
+    <code>SuccessAlert</code>
+  </li>
+  <li>Output them beneath each other in the AppComponent</li>
+  <li>Output a warning or success message in the components</li>
+  <li>Style the components appropriately</li>
+</ol>
+<p>
+  N.B. I've made this a bit more challenging by rendering each component conditionally based on
+  state controlled by the button below.
+</p>
+
+<div class="card">
+  <div class="card-body" style="height: 150px">
+    <div class="btn-group mb-3">
+      <div class="btn btn-success" (click)="onToggleSuccess()">Success</div>
+      <div class="btn btn-warning" (click)="onToggleWarning()">Warning</div>
+    </div>
+    <div *ngIf="showWarning">
+      <app-warning-component></app-warning-component>
+    </div>
+    <div *ngIf="showSuccess">
+      <app-success-component></app-success-component>
+    </div>
+  </div>
+</div>
