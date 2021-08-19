@@ -71,4 +71,27 @@
 </div>
 
 <h3 class="h4">Two-way event binding</h3>
-<div class="alert alert-danger" role="alert">Come back to this</div>
+<p>
+  There are two ways to engineer two-way event binding. One way is to have both an event binding and
+  a property binding applied to an element. The event would update the property binding and the
+  property binding would reflect the event.
+  <span style="color: red">Come back and add notes on the more laborious approach.</span>
+</p>
+<p>
+  A more concise way to achieve this is to use the <code>ngModel</code> directive. This is a special
+  kind of directive that combines event binding and property binding in a single declaration. This
+  is reflected in the syntax: <code>[(ngModel)]</code>. We use the square brackets of property
+  binding combined with the circular brackets of event binding.
+</p>
+<div class="card">
+  <div class="card-body">
+    <label for="two-way-binding">{{ twoWayBindingVar }}</label>
+    <input id="two-way-binding" class="form-control" [(ngModel)]="twoWayBindingVar" />
+  </div>
+</div>
+<p>
+  Above, we have used two-way binding to have the input text automatically update the variable above
+  the input. When we do this with <code>ngModel</code>, we don't need to use the
+  <code>$event</code> variable tied to a method. We just have a property on the class that is
+  updated like so:
+</p>

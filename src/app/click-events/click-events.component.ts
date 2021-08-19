@@ -7,7 +7,7 @@ import {Component, OnInit} from '@angular/core';
 })
 export class ClickEventsComponent implements OnInit {
   public inputVariable = 'This text will change as you type!';
-  public twoWayBindingVariable = 'test';
+  public twoWayBindingVar = 'Type to update me';
   public basicClickMessage = 'You clicked the button. Well done.';
   public printInput = `<input type="text" class="form-control" (input)="updateVariable($event)" />`;
 
