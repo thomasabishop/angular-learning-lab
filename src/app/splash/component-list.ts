@@ -50,4 +50,9 @@ export const componentList: IComponentList[] = [
     category: 'Udemy Exercise',
     path: 'udemy-create-component',
   },
+  {
+    component: 'Data binding',
+    category: 'Udemy Exercise',
+    path: 'udemy-data-binding',
+  },
 ];

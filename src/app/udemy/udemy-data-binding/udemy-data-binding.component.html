@@ -1,0 +1,31 @@
+<h2 class="h3">Udemy Assignment 2: Practising data binding</h2>
+<hr />
+<ol>
+  <li>Add an input field which updates a property('username') via two-way binding</li>
+  <li>Output the username property via string interpolation in a paragraph below the input</li>
+  <li>Add a button which may only be clicked if the username is <b>not</b> an empty string</li>
+  <li>Upon clicking the button, the username should be reset to an empty string</li>
+</ol>
+
+<div class="card">
+  <div class="card-body">
+    <input
+      type="text"
+      class="form-control mb-2"
+      placeholder="Type username here"
+      [(ngModel)]="username"
+    />
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <span class="input-group-text">Your username is</span>
+      </div>
+      <input type="text" class="form-control" [placeholder]="username" />
+      <div *ngIf="usernameIsEmpty(); else activeResetButton">
+        <button class="btn btn-primary ml-3" disabled>Reset</button>
+      </div>
+      <ng-template #activeResetButton>
+        <button #activeButton class="btn btn-primary ml-3" (click)="onResetInput()">Reset</button>
+      </ng-template>
+    </div>
+  </div>
+</div>

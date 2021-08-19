@@ -29,6 +29,7 @@ import {ListerComponent} from './learning-testing/testing-dom/lister/lister.comp
 import {UdemyCreateComponentComponent} from './udemy/udemy-create-component/udemy-create-component.component';
 import {WarningComponent} from './udemy/udemy-create-component/warning-alert/warning.component';
 import {SuccessComponent} from './udemy/udemy-create-component/success-alert/success.component';
+import {UdemyDataBindingComponent} from './udemy/udemy-data-binding/udemy-data-binding.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -55,6 +56,7 @@ import {SuccessComponent} from './udemy/udemy-create-component/success-alert/suc
     UdemyCreateComponentComponent,
     WarningComponent,
     SuccessComponent,
+    UdemyDataBindingComponent,
   ],
   imports: [
     BrowserModule,
@@ -98,6 +100,10 @@ import {SuccessComponent} from './udemy/udemy-create-component/success-alert/suc
       {
         path: 'udemy-create-component',
         component: UdemyCreateComponentComponent,
+      },
+      {
+        path: 'udemy-data-binding',
+        component: UdemyDataBindingComponent,
       },
     ]),
   ],
