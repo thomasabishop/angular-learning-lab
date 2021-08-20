@@ -1,0 +1,57 @@
+<h2 class="h3">Udemy Assignment 3: Practising directives</h2>
+<hr />
+<ol>
+  <li>Add a button that says 'display details'</li>
+  <li>Add a paragraph with any content content of your choice</li>
+  <li>Toggle the display of of that paragraph with the button created in the first step</li>
+  <li>
+    Log all button clicks in an array and output that array below the paragraph. Maybe log a
+    timestamp of simply an incrementing number
+  </li>
+  <li>
+    Starting at the 5th log item, give all future log items a blue background (via
+    <code>ngStyle</code>) and white colour (via <code>ngClass</code>)
+  </li>
+</ol>
+
+<div class="card">
+  <div class="card-body">
+    <div class="row">
+      <div class="col">
+        <button (click)="onRecordClicks()" class="btn btn-sm btn-primary mb-3">
+          Display details
+        </button>
+      </div>
+      <div class="col">
+        <ng-container *ngIf="paragraphIsVisible">
+          <p>Lorem ipsum dolor sit amet.</p>
+        </ng-container>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Count</th>
+              <th>Timestamp</th>
+            </tr>
+          </thead>
+          <tbody>
+            <ng-container *ngFor="let click of buttonClicks; let i = index">
+              <tr
+                [ngClass]="{
+                  'blue-background': i >= 5
+                }"
+              >
+                <td>{{ i }}</td>
+                <td>{{ click }}</td>
+              </tr>
+            </ng-container>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+;

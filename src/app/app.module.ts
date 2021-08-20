@@ -30,6 +30,7 @@ import {UdemyCreateComponentComponent} from './udemy/udemy-create-component/udem
 import {WarningComponent} from './udemy/udemy-create-component/warning-alert/warning.component';
 import {SuccessComponent} from './udemy/udemy-create-component/success-alert/success.component';
 import {UdemyDataBindingComponent} from './udemy/udemy-data-binding/udemy-data-binding.component';
+import {UdemyDirectivesComponent} from './udemy/udemy-directives/udemy-directives.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -57,6 +58,7 @@ import {UdemyDataBindingComponent} from './udemy/udemy-data-binding/udemy-data-b
     WarningComponent,
     SuccessComponent,
     UdemyDataBindingComponent,
+    UdemyDirectivesComponent,
   ],
   imports: [
     BrowserModule,
@@ -104,6 +106,10 @@ import {UdemyDataBindingComponent} from './udemy/udemy-data-binding/udemy-data-b
       {
         path: 'udemy-data-binding',
         component: UdemyDataBindingComponent,
+      },
+      {
+        path: 'udemy-directives',
+        component: UdemyDirectivesComponent,
       },
     ]),
   ],
