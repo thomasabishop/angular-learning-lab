@@ -60,4 +60,9 @@ export const componentList: IComponentList[] = [
     category: 'Udemy Exercise',
     path: 'udemy-directives',
   },
+  {
+    component: 'Two-way binding',
+    category: 'General',
+    path: 'two-way-binding',
+  },
 ];

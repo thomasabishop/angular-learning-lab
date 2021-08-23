@@ -31,6 +31,10 @@ import {WarningComponent} from './udemy/udemy-create-component/warning-alert/war
 import {SuccessComponent} from './udemy/udemy-create-component/success-alert/success.component';
 import {UdemyDataBindingComponent} from './udemy/udemy-data-binding/udemy-data-binding.component';
 import {UdemyDirectivesComponent} from './udemy/udemy-directives/udemy-directives.component';
+import {TwoWayBindingComponent} from './two-way-binding/two-way-binding.component';
+import { MethodOneComponent } from './two-way-binding/method-one/method-one.component';
+import { ListItemComponent } from './two-way-binding/method-one/list-item/list-item.component';
+import { AddToListFormComponent } from './two-way-binding/method-one/add-to-list-form/add-to-list-form.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -59,6 +63,10 @@ import {UdemyDirectivesComponent} from './udemy/udemy-directives/udemy-directive
     SuccessComponent,
     UdemyDataBindingComponent,
     UdemyDirectivesComponent,
+    TwoWayBindingComponent,
+    MethodOneComponent,
+    ListItemComponent,
+    AddToListFormComponent,
   ],
   imports: [
     BrowserModule,
@@ -98,6 +106,10 @@ import {UdemyDirectivesComponent} from './udemy/udemy-directives/udemy-directive
       {
         path: 'learning-testing',
         component: LearningTestingComponent,
+      },
+      {
+        path: 'two-way-binding',
+        component: TwoWayBindingComponent,
       },
       {
         path: 'udemy-create-component',
