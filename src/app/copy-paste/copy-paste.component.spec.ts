@@ -33,7 +33,7 @@ describe('CopyPasteComponent', () => {
     } as any;
   });
 
-  fit('calls ClipboardService `writeToClipboard` method on active tab', () => {
+  it('calls ClipboardService `writeToClipboard` method on active tab', () => {
     spyOn(clipboardService, 'writeToClipboard');
     // Create some content for the mocked active tab:
     const tabMock = document.createElement('div');

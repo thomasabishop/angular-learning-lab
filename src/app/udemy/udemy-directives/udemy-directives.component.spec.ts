@@ -22,21 +22,21 @@ describe('UdemyDirectivesComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  fit('onRecordClicks should call onToggleParagraphVisibility', () => {
+  it('onRecordClicks should call onToggleParagraphVisibility', () => {
     spyOn(component, 'onToggleParagraphVisibility');
     component.onRecordClicks();
     fixture.detectChanges();
     expect(component.onToggleParagraphVisibility).toHaveBeenCalled();
   });
 
-  fit('buttonClicks should increment after onRecordClicks is called', () => {
+  it('buttonClicks should increment after onRecordClicks is called', () => {
     expect(component.buttonClicks.length).toEqual(0);
     component.onRecordClicks();
     fixture.detectChanges();
     expect(component.buttonClicks.length).toBeGreaterThan(0);
   });
 
-  fit('table row should have blue background after minimum of 5 clicks', () => {
+  it('table row should have blue background after minimum of 5 clicks', () => {
     for (let i = 0; i <= 5; i++) {
       component.onRecordClicks();
     }
