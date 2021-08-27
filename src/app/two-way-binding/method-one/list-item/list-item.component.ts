@@ -7,7 +7,7 @@ import IListTask from '../list-item';
   template: `
     <div class="mb-2 list-group-item  flex-column align-items-start">
       <div class="d-flex w-100 justify-content-between">
-        <h5 class="mb-1">{{ listTask.task }}</h5>
+        <h5 class="mb-1 task">{{ listTask.task }}</h5>
         <button class="btn btn-outline-danger btn-sm" (click)="onRaiseDelete(listTask.task)">
           Delete
         </button>
@@ -18,14 +18,19 @@ import IListTask from '../list-item';
 })
 export class ListItemComponent {
   @Input() public listTask: IListTask;
-  @Output() public deleteRequest = new EventEmitter();
+  @Output() public deleteRequest = new EventEmitter<string>();
 
-  // tslint:disable-next-line: max-line-length
-  // When individual list item button clicked, the task property of the specific listItem object will be emitted as an event, to be fed to the partent `onDeleteTask` method which removes it from the array of list items.
-
+  /**
+   * When list item delete button clicked, the task property of the specific listItem object will be emitted as an event, to be fed to the parent `onDeleteTask` method which removes it from the array of list items.
+   * @param task string corresponding to the task name
+   */
   public onRaiseDelete(task: string): void {
     this.deleteRequest.emit(task);
   }
 }
 
-// as whole?
+/**
+ * For some reason this proved really hard to test.
+ * The event emitter couldn't be tested unlike the other child component.
+ * Use the other child to remember how to test emitters.
+ */

@@ -19,14 +19,18 @@ export class MethodOneComponent {
     },
   ];
 
-  // Add new task to the list array
+  /**
+   * Add new task to the listTasks array
+   * @param task an event raised by child <app-add-to-list-form>
+   */
   public onCreateTask(task: IListTask): void {
     this.listTasks.push(task);
-    console.log(this.listTasks);
   }
 
-  // Filter list array for object containing taskName, get index and remove it from array
-  // The task name will be received by the function as an Event emitter of type string, defined in <list-item>.
+  /**
+   * Filter list array for object containing taskName, get index and remove it from array
+   * @param taskName  an event raised by child <app-list-item>
+   */
   public onDeleteTask(taskName: string): void {
     const position = this.listTasks.map((item) => item.task).indexOf(taskName);
     this.listTasks.splice(position, 1);

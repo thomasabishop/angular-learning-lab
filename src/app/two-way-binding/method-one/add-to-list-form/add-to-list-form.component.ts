@@ -9,7 +9,7 @@ import IListTask from '../list-item';
         <input type="text" class="form-control" placeholder="Your task" #taskInput />
         <div class="input-group-append">
           <button
-            class="btn btn-outline-primary"
+            class="delete-button btn btn-outline-primary"
             type="button"
             (click)="onAddNewTask(taskInput.value)"
           >
@@ -22,8 +22,10 @@ import IListTask from '../list-item';
 })
 export class AddToListFormComponent {
   @Output() public newTask = new EventEmitter<IListTask>();
+
   // Emit value inputted to form along with timestamp as event (packaged as object)
   // This is passed to parent `onCreateTask` method which adds the task to the Task list array
+
   public onAddNewTask(taskEvent: string): void {
     this.newTask.emit({
       task: taskEvent,
