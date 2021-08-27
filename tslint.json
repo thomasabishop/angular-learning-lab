@@ -1,31 +1,31 @@
 {
-    "extends": ["tslint-angular"],
-    "rules": {
-      "arrow-parens": [true, "ban-single-arg-parens"],
-      "max-classes-per-file": [true, 1, "exclude-class-expressions"],
-      "max-line-length": [true, {"limit": 100, "ignore-pattern": "^import |^export {(.*?)}"}],
-      "no-console": false,
-      "no-unused-expression": [true, "allow-fast-null-checks"],
-      "no-non-null-assertion": false,
-      "object-literal-sort-keys": false,
-      "object-literal-key-quotes": [true, "as-needed"],
-      "only-arrow-functions": false,
-      "typedef": [true, "call-signature", "parameter"],
-      "interface-name": [true, "always-prefix"],
-      "quotemark": [true, "single", "avoid-escape"],
-      "variable-name": [
-        true,
-        "ban-keywords",
-        "check-format",
-        "allow-leading-underscore",
-        "allow-trailing-underscore"
-      ],
-      "component-max-inline-declarations": true,
-      "no-input-prefix": true,
-      "no-unused-css": true,
-      "template-conditional-complexity": [true, 2],
-      "prefer-inline-decorator": [true, "HostListener"],
-      "member-access": true
-    }
+  "extends": ["tslint-angular"],
+  "rules": {
+    "arrow-parens": [false, "ban-single-arg-parens"],
+    "max-classes-per-file": [true, 1, "exclude-class-expressions"],
+    "no-console": false,
+    "no-unused-expression": [true, "allow-fast-null-checks"],
+    "no-non-null-assertion": false,
+    "object-literal-sort-keys": false,
+    "object-literal-key-quotes": [true, "as-needed"],
+    "only-arrow-functions": false,
+    "typedef": [true, "call-signature", "parameter"],
+    "interface-name": [true, "always-prefix"],
+    "quotemark": [true, "single", "avoid-escape"],
+    "variable-name": [
+      true,
+      "ban-keywords",
+      "check-format",
+      "allow-leading-underscore",
+      "allow-trailing-underscore"
+    ],
+    "max-line-length": false,
+    "component-max-inline-declarations": true,
+    "no-input-prefix": true,
+    "no-unused-css": true,
+    "template-conditional-complexity": [true, 2],
+    "prefer-inline-decorator": [true, "HostListener"],
+    "member-access": true,
+    "no-trailing-whitespace": false
   }
-  
+}
