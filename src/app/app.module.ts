@@ -32,9 +32,10 @@ import {SuccessComponent} from './udemy/udemy-create-component/success-alert/suc
 import {UdemyDataBindingComponent} from './udemy/udemy-data-binding/udemy-data-binding.component';
 import {UdemyDirectivesComponent} from './udemy/udemy-directives/udemy-directives.component';
 import {TwoWayBindingComponent} from './two-way-binding/two-way-binding.component';
-import { MethodOneComponent } from './two-way-binding/method-one/method-one.component';
-import { ListItemComponent } from './two-way-binding/method-one/list-item/list-item.component';
-import { AddToListFormComponent } from './two-way-binding/method-one/add-to-list-form/add-to-list-form.component';
+import {MethodOneComponent} from './two-way-binding/method-one/method-one.component';
+import {ListItemComponent} from './two-way-binding/method-one/list-item/list-item.component';
+import {AddToListFormComponent} from './two-way-binding/method-one/add-to-list-form/add-to-list-form.component';
+import {ViewChildComponent} from './view-child/view-child.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -67,6 +68,7 @@ import { AddToListFormComponent } from './two-way-binding/method-one/add-to-list
     MethodOneComponent,
     ListItemComponent,
     AddToListFormComponent,
+    ViewChildComponent,
   ],
   imports: [
     BrowserModule,
@@ -122,6 +124,10 @@ import { AddToListFormComponent } from './two-way-binding/method-one/add-to-list
       {
         path: 'udemy-directives',
         component: UdemyDirectivesComponent,
+      },
+      {
+        path: 'view-child',
+        component: ViewChildComponent,
       },
     ]),
   ],
