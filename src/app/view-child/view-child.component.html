@@ -1,0 +1,30 @@
+<h2 class="h3"><code>@ViewChild</code></h2>
+<hr />
+<p>
+  This page exists just to demonstrate the different use-cases of the
+  <code>ViewChild</code> decorator and the various references it returns. Most of this happens in
+  the console.
+</p>
+<div class="card">
+  <div class="card-body">
+    <form class="mb-2">
+      <label for="username">Username:</label>
+      <input id="username" type="text" class="form-control" #username />
+    </form>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-body">
+    <p>
+      The following element is injected here to test using <code>@ViewChild</code> with an embedded
+      Angular component.
+    </p>
+
+    <app-names-ages> </app-names-ages>
+  </div>
+</div>
+
+<button (click)="onShowViewChildValue()" class="btn btn-outline-primary btn-sm">
+  Trigger ViewChild calls
+</button>

@@ -65,4 +65,9 @@ export const componentList: IComponentList[] = [
     category: 'General',
     path: 'two-way-binding',
   },
+  {
+    component: 'View child',
+    category: 'General',
+    path: 'view-child',
+  },
 ];
