@@ -1,5 +1,26 @@
 <h2 class="h3">Observables</h2>
 <hr />
+<h3 class="h4">Really basic observable</h3>
+<p>We are going to create a basic observable.</p>
+<p>
+  The template variable below stores the current time. This is achieved by a subscription that
+  updates the value of the variable with the data returned from a time Observable.
+</p>
 <div class="card">
-  <div class="card-body"></div>
+  <div class="card-body">
+    <p>
+      The time is: <span class="font-weight-bold">{{ basicEmitVal }}</span>
+    </p>
+  </div>
+</div>
+
+<h3 class="h4">Interval observable</h3>
+<p>
+  This example uses the built-in <code>interval()</code> methof from RXJS to log the date every
+  second.
+</p>
+<div class="card">
+  <div class="card-body">
+    {{ dateInterval }}
+  </div>
 </div>
