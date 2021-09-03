@@ -70,4 +70,9 @@ export const componentList: IComponentList[] = [
     category: 'General',
     path: 'view-child',
   },
+  {
+    component: 'Post processor',
+    category: 'Work-related',
+    path: 'post-processor',
+  },
 ];

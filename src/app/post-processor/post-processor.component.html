@@ -1,0 +1,37 @@
+<h2 class="h3">Postprocessing Rules</h2>
+<hr />
+<div class="card">
+  <div class="card-body">
+    <form [formGroup]="postProcessors">
+      <!--A and An autocorrection-->
+      <p class="h6">Enable 'A' and 'An' correction tool</p>
+      <div class="btn-group btn-group-toggle" data-toggle="buttons">
+        <label class="btn btn-sm btn-primary active">
+          <input type="radio" value="Yes" formControlName="enableAAnCorrection" /> Yes
+        </label>
+        <label class="btn btn-sm btn-primary">
+          <input type="radio" value="No" formControlName="enableAAnCorrection" /> No
+        </label>
+      </div>
+
+      <div class="h6 mt-3">Enable automatic sentence capitalisation</div>
+      <div class="btn-group btn-group-toggle" data-toggle="buttons">
+        <label class="btn btn-sm btn-primary active">
+          <input type="radio" value="Yes" formControlName="enableAutoCapitalisation" /> Yes
+        </label>
+        <label class="btn btn-sm btn-primary">
+          <input type="radio" value="No" formControlName="enableAutoCapitalisation" /> No
+        </label>
+      </div>
+      <div class="h6 mt-3">Enable white space collapsing</div>
+      <div class="btn-group btn-group-toggle" data-toggle="buttons">
+        <label class="btn btn-sm btn-primary active">
+          <input type="radio" value="Yes" formControlName="enableWhitespaceCollapse" /> Yes
+        </label>
+        <label class="btn btn-sm btn-primary">
+          <input type="radio" value="No" formControlName="enableWhitspaceCollapse" /> No
+        </label>
+      </div>
+    </form>
+  </div>
+</div>

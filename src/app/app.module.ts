@@ -3,6 +3,7 @@ import {BrowserModule} from '@angular/platform-browser';
 import {HttpClientModule} from '@angular/common/http';
 import {TabsModule} from 'ngx-bootstrap/tabs';
 import {HighlightModule, HIGHLIGHT_OPTIONS} from 'ngx-highlightjs';
+import {ReactiveFormsModule} from '@angular/forms';
 import {AppComponent} from './app.component';
 import {ClickEventsComponent} from './click-events/click-events.component';
 import {StylingConventionsComponent} from './styling-conventions/styling-conventions.component';
@@ -36,6 +37,8 @@ import {MethodOneComponent} from './two-way-binding/method-one/method-one.compon
 import {ListItemComponent} from './two-way-binding/method-one/list-item/list-item.component';
 import {AddToListFormComponent} from './two-way-binding/method-one/add-to-list-form/add-to-list-form.component';
 import {ViewChildComponent} from './view-child/view-child.component';
+import {PostProcessorComponent} from './post-processor/post-processor.component';
+import {ToggleRuleComponent} from './post-processor/toggle-rule/toggle-rule.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -69,12 +72,15 @@ import {ViewChildComponent} from './view-child/view-child.component';
     ListItemComponent,
     AddToListFormComponent,
     ViewChildComponent,
+    PostProcessorComponent,
+    ToggleRuleComponent,
   ],
   imports: [
     BrowserModule,
     HighlightModule,
     HttpClientModule,
     FormsModule,
+    ReactiveFormsModule,
     TabsModule.forRoot(),
     RouterModule.forRoot([
       {
@@ -128,6 +134,10 @@ import {ViewChildComponent} from './view-child/view-child.component';
       {
         path: 'view-child',
         component: ViewChildComponent,
+      },
+      {
+        path: 'post-processor',
+        component: PostProcessorComponent,
       },
     ]),
   ],
