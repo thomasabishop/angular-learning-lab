@@ -1,0 +1,47 @@
+<h2 class="h3">Reactive Forms</h2>
+<hr />
+<p>The below form captures input data using the Angular Reactive Forms module.</p>
+<div class="card">
+  <div class="card-body">
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="exampleInputEmail1">Email address</label>
+        <input
+          formControlName="email"
+          type="email"
+          class="form-control"
+          id="exampleInputEmail1"
+          aria-describedby="emailHelp"
+          placeholder="Enter email"
+        />
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Password</label>
+        <input
+          formControlName="password"
+          type="password"
+          class="form-control"
+          id="exampleInputPassword1"
+          placeholder="Password"
+        />
+      </div>
+      <div class="form-check">
+        <input
+          formControlName="checkout"
+          type="checkbox"
+          class="form-check-input"
+          id="exampleCheck1"
+        />
+        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+      </div>
+      <button type="submit" class="mt-2 btn btn-primary btn-sm">Submit</button>
+    </form>
+  </div>
+</div>
+
+<p>The output is displayed below via <code>this.[formBinding].value</code></p>
+<div class="card">
+  <div class="card-body">
+    {{ formValues }}
+  </div>
+</div>

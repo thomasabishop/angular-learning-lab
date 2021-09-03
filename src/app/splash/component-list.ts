@@ -75,4 +75,14 @@ export const componentList: IComponentList[] = [
     category: 'Work-related',
     path: 'post-processor',
   },
+  {
+    component: 'Reactive Forms',
+    category: 'General',
+    path: 'reactive-forms',
+  },
+  {
+    component: 'Observables',
+    category: 'General',
+    path: 'observables',
+  },
 ];

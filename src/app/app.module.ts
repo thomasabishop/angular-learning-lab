@@ -39,6 +39,8 @@ import {AddToListFormComponent} from './two-way-binding/method-one/add-to-list-f
 import {ViewChildComponent} from './view-child/view-child.component';
 import {PostProcessorComponent} from './post-processor/post-processor.component';
 import {ToggleRuleComponent} from './post-processor/toggle-rule/toggle-rule.component';
+import {ReactiveFormsComponent} from './reactive-forms/reactive-forms.component';
+import {ObservablesComponent} from './observables/observables.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -74,6 +76,8 @@ import {ToggleRuleComponent} from './post-processor/toggle-rule/toggle-rule.comp
     ViewChildComponent,
     PostProcessorComponent,
     ToggleRuleComponent,
+    ReactiveFormsComponent,
+    ObservablesComponent,
   ],
   imports: [
     BrowserModule,
@@ -138,6 +142,14 @@ import {ToggleRuleComponent} from './post-processor/toggle-rule/toggle-rule.comp
       {
         path: 'post-processor',
         component: PostProcessorComponent,
+      },
+      {
+        path: 'reactive-forms',
+        component: ReactiveFormsComponent,
+      },
+      {
+        path: 'observables',
+        component: ObservablesComponent,
       },
     ]),
   ],
