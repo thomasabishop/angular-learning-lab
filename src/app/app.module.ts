@@ -37,13 +37,10 @@ import {MethodOneComponent} from './two-way-binding/method-one/method-one.compon
 import {ListItemComponent} from './two-way-binding/method-one/list-item/list-item.component';
 import {AddToListFormComponent} from './two-way-binding/method-one/add-to-list-form/add-to-list-form.component';
 import {ViewChildComponent} from './view-child/view-child.component';
-<<<<<<< HEAD
 import {PostProcessorComponent} from './post-processor/post-processor.component';
 import {ToggleRuleComponent} from './post-processor/toggle-rule/toggle-rule.component';
 import {ReactiveFormsComponent} from './reactive-forms/reactive-forms.component';
 import {ObservablesComponent} from './observables/observables.component';
-=======
->>>>>>> 0846b3e77c3ae7e121282b4dba553cd0bc037e39
 @NgModule({
   declarations: [
     AppComponent,
@@ -77,13 +74,10 @@ import {ObservablesComponent} from './observables/observables.component';
     ListItemComponent,
     AddToListFormComponent,
     ViewChildComponent,
-<<<<<<< HEAD
     PostProcessorComponent,
     ToggleRuleComponent,
     ReactiveFormsComponent,
     ObservablesComponent,
-=======
->>>>>>> 0846b3e77c3ae7e121282b4dba553cd0bc037e39
   ],
   imports: [
     BrowserModule,

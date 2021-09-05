@@ -3,14 +3,30 @@
 <h3 class="h4">Really basic observable</h3>
 <p>We are going to create a basic observable.</p>
 <p>
-  The template variable below stores the current time. This is achieved by a subscription that
-  updates the value of the variable with the data returned from a time Observable.
+  The template variable below stores a number value which an Observable increments by one every
+  second. This subscription is destroyed when the component is derendered.
+</p>
+<p>
+  We have used the <code>error()</code> method on the Observable to emit an error if the value of
+  the number is equal to 5. This is why the output stops at <code>4</code>. We could also just call
+  <code>.complete()</code> on the Observable. In both cases the subscription ends.
 </p>
 <div class="card">
   <div class="card-body">
-    <p>
-      The time is: <span class="font-weight-bold">{{ basicEmitVal }}</span>
-    </p>
+    <div class="row">
+      <div class="col-6">
+        <div class="alert alert-secondary">
+          <p>Data stream:</p>
+          <p>{{ customIntervalOutput }}</p>
+        </div>
+      </div>
+      <div class="col-6">
+        <div *ngIf="!throwError; else error" class="alert alert-success">All good so far</div>
+        <ng-template #error>
+          <div class="alert alert-danger">Error: number is equal to 5!</div>
+        </ng-template>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -21,6 +37,6 @@
 </p>
 <div class="card">
   <div class="card-body">
-    {{ dateInterval }}
+    {{ intervalOutput }}
   </div>
 </div>
