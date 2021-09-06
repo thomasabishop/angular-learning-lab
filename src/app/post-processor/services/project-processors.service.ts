@@ -4,6 +4,21 @@ import {Injectable} from '@angular/core';
   providedIn: 'root',
 })
 export class ProjectProcessorsService {
-  public postProcessors: any;
-  constructor() {}
+  private rules = {
+    enableAAnCorrection: false,
+    enableAutoCapitalisation: false,
+    enableWhitespaceCollapse: false,
+  };
+
+  public getPostProcessor(postprocessor: string): boolean {
+    return this.rules[postprocessor];
+  }
+
+  public setPostProcessor(postprocessor: string, status: boolean): void {
+    this.rules[postprocessor] = status;
+  }
+
+  public returnCurrentValues(): string {
+    return JSON.stringify(this.rules);
+  }
 }
