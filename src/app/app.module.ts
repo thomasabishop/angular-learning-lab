@@ -38,7 +38,6 @@ import {ListItemComponent} from './two-way-binding/method-one/list-item/list-ite
 import {AddToListFormComponent} from './two-way-binding/method-one/add-to-list-form/add-to-list-form.component';
 import {ViewChildComponent} from './view-child/view-child.component';
 import {PostProcessorComponent} from './post-processor/post-processor.component';
-import {ToggleRuleComponent} from './post-processor/toggle-rule/toggle-rule.component';
 import {ReactiveFormsComponent} from './reactive-forms/reactive-forms.component';
 import {ObservablesComponent} from './observables/observables.component';
 @NgModule({
@@ -75,7 +74,6 @@ import {ObservablesComponent} from './observables/observables.component';
     AddToListFormComponent,
     ViewChildComponent,
     PostProcessorComponent,
-    ToggleRuleComponent,
     ReactiveFormsComponent,
     ObservablesComponent,
   ],
